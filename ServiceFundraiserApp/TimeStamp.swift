@@ -31,10 +31,13 @@ class timeStamp{
     }
     
     func getDifference() -> String {
-        //TODO: Fix this funtion.
-        let cal = NSCalendar.current
-        let hour = cal.dateComponents([.hour], from: clockIn, to: clockOut)
-        let min = cal.dateComponents([.minute], from: clockIn, to: clockOut)
-        return "\(hour):\(min)"
+        let cal = Calendar.current
+        var min:Int = cal.dateComponents([.minute], from: clockIn, to: clockOut).minute ?? 0
+        var hour:Int = 0
+        if min > 59 {
+            hour = min / 60
+            min -= 60 * hour
+        }
+        return String(format: "%d:%02d", hour, min)
     }
 }
