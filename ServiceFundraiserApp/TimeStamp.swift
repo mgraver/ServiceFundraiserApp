@@ -38,6 +38,6 @@ class timeStamp{
             hour = min / 60
             min -= 60 * hour
         }
-        return String(format: "%d:%02d", hour, min)
+        return String(format: "%02d:%02d", hour, min)
     }
 }
