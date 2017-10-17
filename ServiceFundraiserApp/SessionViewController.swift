@@ -9,4 +9,8 @@
 import UIKit
 class SessionView: UIViewController{
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Code...
+    }
 }

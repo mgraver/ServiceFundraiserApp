@@ -9,4 +9,8 @@
 import UIKit
 class NewRecordController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       //Code...
+    }
 }
