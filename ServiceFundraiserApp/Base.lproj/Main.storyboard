@@ -10,6 +10,25 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="gDp-jO-ocj">
+            <objects>
+                <viewController id="Xtp-De-2Aq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mZ5-9E-APj"/>
+                        <viewControllerLayoutGuide type="bottom" id="sSa-IA-595"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UEF-Da-9m1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3aY-gd-hQs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGV-7k-zg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-754" y="113"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,6 +53,9 @@
                                 <color key="backgroundColor" white="0.8507254464285714" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Records"/>
+                                <connections>
+                                    <segue destination="Xtp-De-2Aq" kind="show" id="ESs-Pp-Kl0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-Ea-Bm6">
                                 <rect key="frame" x="101" y="63" width="173" height="33"/>
