@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class NewRecordController: UIViewController {
+class NewSessionController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

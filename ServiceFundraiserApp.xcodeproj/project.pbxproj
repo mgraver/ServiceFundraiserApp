@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C5EC8F31F96A01400343196 /* NewRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F21F96A01400343196 /* NewRecordController.swift */; };
+		4C5EC8F31F96A01400343196 /* NewSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F21F96A01400343196 /* NewSessionController.swift */; };
 		4C5EC8F71F96A12300343196 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F61F96A12300343196 /* SessionViewController.swift */; };
 		4CE4411E1F8E985E00D640F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4411D1F8E985E00D640F8 /* AppDelegate.swift */; };
 		4CE441201F8E985E00D640F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4411F1F8E985E00D640F8 /* ViewController.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C5EC8F21F96A01400343196 /* NewRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordController.swift; sourceTree = "<group>"; };
+		4C5EC8F21F96A01400343196 /* NewSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionController.swift; sourceTree = "<group>"; };
 		4C5EC8F61F96A12300343196 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		4CE4411A1F8E985E00D640F8 /* ServiceFundraiserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceFundraiserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE4411D1F8E985E00D640F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			children = (
 				4CE4411D1F8E985E00D640F8 /* AppDelegate.swift */,
 				4CE4411F1F8E985E00D640F8 /* ViewController.swift */,
-				4C5EC8F21F96A01400343196 /* NewRecordController.swift */,
+				4C5EC8F21F96A01400343196 /* NewSessionController.swift */,
 				4C5EC8F61F96A12300343196 /* SessionViewController.swift */,
 				4CE441211F8E985F00D640F8 /* Main.storyboard */,
 				4CE441241F8E985F00D640F8 /* Assets.xcassets */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE441201F8E985E00D640F8 /* ViewController.swift in Sources */,
-				4C5EC8F31F96A01400343196 /* NewRecordController.swift in Sources */,
+				4C5EC8F31F96A01400343196 /* NewSessionController.swift in Sources */,
 				4CE4411E1F8E985E00D640F8 /* AppDelegate.swift in Sources */,
 				4C5EC8F71F96A12300343196 /* SessionViewController.swift in Sources */,
 				4CE441301F8E98A600D640F8 /* TimeStamp.swift in Sources */,
