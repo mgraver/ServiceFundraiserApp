@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
-        <!--New Record Controller-->
+        <!--New Session Controller-->
         <scene sceneID="ghG-3n-xl7">
             <objects>
-                <viewController id="qW5-2x-NsQ" customClass="NewRecordController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qW5-2x-NsQ" customClass="NewSessionController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1U-6N-QO7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
