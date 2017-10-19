@@ -587,10 +587,10 @@
             </objects>
             <point key="canvasLocation" x="508" y="811.84407796101959"/>
         </scene>
-        <!--View Controller-->
+        <!--Income Controller-->
         <scene sceneID="3x2-1h-QOK">
             <objects>
-                <viewController id="g0X-wh-aQv" sceneMemberID="viewController">
+                <viewController id="g0X-wh-aQv" customClass="IncomeController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t4H-KQ-bdf"/>
                         <viewControllerLayoutGuide type="bottom" id="oBg-iR-PdU"/>
@@ -614,6 +614,9 @@
                                 <rect key="frame" x="294" y="20" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="cPW-OD-tmg" kind="show" id="GZ4-5n-klz"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
                                 <rect key="frame" x="165" y="70" width="152" height="30"/>
@@ -625,10 +628,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="OptionPicker" destination="zIH-46-155" id="v1d-Vg-EsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637.5999999999999" y="801.94902548725645"/>
+            <point key="canvasLocation" x="1518" y="934"/>
         </scene>
         <!--New Session Controller-->
         <scene sceneID="ghG-3n-xl7">
@@ -717,6 +723,9 @@
                                 <rect key="frame" x="16" y="13" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="&lt; Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="MIx-q2-dBj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Session Title: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-GX-jt6">
                                 <rect key="frame" x="16" y="156" width="343" height="36"/>
@@ -799,4 +808,8 @@
             <point key="canvasLocation" x="1640.8" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GZ4-5n-klz"/>
+        <segue reference="MIx-q2-dBj"/>
+    </inferredMetricsTieBreakers>
 </document>
