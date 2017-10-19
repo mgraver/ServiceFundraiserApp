@@ -634,7 +634,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="934"/>
+            <point key="canvasLocation" x="1641" y="812"/>
         </scene>
         <!--New Session Controller-->
         <scene sceneID="ghG-3n-xl7">
@@ -706,6 +706,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kdK-aB-BgD"/>
                     </view>
+                    <connections>
+                        <outlet property="descrTextView" destination="xT4-GR-wew" id="fnf-Ba-bNm"/>
+                        <outlet property="titleTextField" destination="CxA-qr-L7x" id="KWd-FO-h6B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgd-gT-4bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -809,7 +813,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GZ4-5n-klz"/>
+        <segue reference="gyj-P2-l5i"/>
         <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
 </document>
