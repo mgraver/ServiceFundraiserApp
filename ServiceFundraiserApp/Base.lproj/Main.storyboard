@@ -908,6 +908,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="dkS-pv-rSc"/>
         <segue reference="pho-S6-xAb"/>
         <segue reference="Zga-i0-eOY"/>
         <segue reference="IaV-4p-UlA"/>
