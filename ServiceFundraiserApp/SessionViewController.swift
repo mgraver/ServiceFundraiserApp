@@ -9,6 +9,10 @@
 import UIKit
 class SessionView: UIViewController{
     
+    //MARK: passed variables
+    var sessions:[Session]?
+    var currentSession:Session?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Code...

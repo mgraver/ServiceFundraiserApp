@@ -9,6 +9,9 @@
 import UIKit
 class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
+    //MARK: passed data
+    var sessions:[Session]?
+    
     //MARK: UIFields
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descrTextView: UITextView!
