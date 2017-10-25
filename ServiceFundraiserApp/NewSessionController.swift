@@ -31,4 +31,13 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
         }
         return false
     }
+    
+    func validateTitle() -> Bool{
+        return true;
+    }
+    
+    //MARK: actions
+    @IBAction func onCreateClick(_ sender: UIButton) {
+    }
+    
 }
