@@ -769,8 +769,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
-                                    <action selector="onCreateClick:" destination="qW5-2x-NsQ" eventType="touchDown" id="JNa-d5-hl5"/>
-                                    <segue destination="cPW-OD-tmg" kind="show" id="gyj-P2-l5i"/>
+                                    <action selector="onCreateClick:" destination="qW5-2x-NsQ" eventType="touchDown" id="CNJ-p9-8Yk"/>
+                                    <segue destination="cPW-OD-tmg" kind="show" identifier="NStoSessionView" id="gyj-P2-l5i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-t0-H15">
@@ -779,7 +779,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title=" &lt; Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="71x-Qh-bbj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="NStoHomeView" id="71x-Qh-bbj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZB-mL-1WZ">
@@ -916,8 +916,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GZ4-5n-klz"/>
+        <segue reference="gyj-P2-l5i"/>
         <segue reference="KDX-L8-WHK"/>
-        <segue reference="IaV-4p-UlA"/>
+        <segue reference="71x-Qh-bbj"/>
     </inferredMetricsTieBreakers>
 </document>
