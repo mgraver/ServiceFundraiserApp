@@ -34,7 +34,7 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     }
     
     @IBAction func checkEmpty(_ sender: UITextField) {
-        if sender.text!.count == 0 {
+        if sender.text!.trimmingCharacters(in: .whitespaces).count == 0 {
             sender.textColor = UIColor.darkGray
             sender.text = "Enter Title Here"
         }
@@ -49,9 +49,9 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             descrTextView.resignFirstResponder()
-            return true
+            return false
         }
-        return false
+        return true
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -61,6 +61,12 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
         }
     }
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text!.trimmingCharacters(in: .whitespaces).count == 0{
+            textView.textColor = UIColor.darkGray
+            textView.text = "Enter your description here."
+        }
+    }
     
     //Check to make sure title was entered.
     func validateTitle() -> Bool{
@@ -69,7 +75,7 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     //MARK: actions
     @IBAction func onCreateClick(_ sender: UIButton) {
-        print("The length is: \(titleTextField.text!.count)")
+        //Add code
     }
     
 }
