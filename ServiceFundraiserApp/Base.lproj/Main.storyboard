@@ -726,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="954"/>
+            <point key="canvasLocation" x="1769" y="964"/>
         </scene>
         <!--New Session Controller-->
         <scene sceneID="ghG-3n-xl7">
@@ -773,6 +773,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title=" &lt; Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="71x-Qh-bbj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZB-mL-1WZ">
                                 <rect key="frame" x="88" y="52" width="192" height="40"/>
@@ -908,9 +911,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dkS-pv-rSc"/>
-        <segue reference="pho-S6-xAb"/>
-        <segue reference="Zga-i0-eOY"/>
-        <segue reference="IaV-4p-UlA"/>
+        <segue reference="GZ4-5n-klz"/>
+        <segue reference="KDX-L8-WHK"/>
+        <segue reference="71x-Qh-bbj"/>
     </inferredMetricsTieBreakers>
 </document>
