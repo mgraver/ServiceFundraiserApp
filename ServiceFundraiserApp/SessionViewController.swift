@@ -43,7 +43,9 @@ class SessionView: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        if segue {
+            <#code#>
+        }
     }
     
 }
