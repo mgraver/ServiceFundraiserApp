@@ -10,7 +10,11 @@ import UIKit
 class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     //MARK: Variables
+    var sessions:[Session]?
+    var editSession:Session?
     let picker_data = ["Add", "Subtract"]
+    
+    //MARK: IBOutlets
     @IBOutlet weak var OptionPicker: UIPickerView!
     
     //Set up the view as needed.

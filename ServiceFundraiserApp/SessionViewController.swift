@@ -43,8 +43,10 @@ class SessionView: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue {
-            <#code#>
+        if segue.identifier == "SVtoIncomeEdit" {
+            if let incomeController = segue.destination as? IncomeController{
+                incomeController.editSession = currentSession
+            }
         }
     }
     

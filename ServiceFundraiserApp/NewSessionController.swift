@@ -86,12 +86,14 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
         return newSession
     }
     
+    
     @IBAction func onCreateClick(_ sender: UIButton) {
         if validateTitle() {
             self.performSegue(withIdentifier: "NStoSessionView", sender: self)
         }
     }
     
+    //Send data to the Income controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newSession = buildSession()
         if let sessionView = segue.destination as? SessionView{
