@@ -78,7 +78,7 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     }
     
     func buildSession() -> Session {
-        var description:String = ""
+        var description:String = "N/A"
         if descrTextView.text != descPlaceHolder{
             description = descrTextView.text
         }

@@ -770,7 +770,6 @@
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="onCreateClick:" destination="qW5-2x-NsQ" eventType="touchDown" id="CNJ-p9-8Yk"/>
-                                    <segue destination="cPW-OD-tmg" kind="show" identifier="NStoSessionView" id="gyj-P2-l5i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-t0-H15">
@@ -809,11 +808,12 @@
                     <connections>
                         <outlet property="descrTextView" destination="xT4-GR-wew" id="fnf-Ba-bNm"/>
                         <outlet property="titleTextField" destination="CxA-qr-L7x" id="KWd-FO-h6B"/>
+                        <segue destination="cPW-OD-tmg" kind="show" identifier="NStoSessionView" id="phd-jX-37n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgd-gT-4bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.60000000000002" y="116.49175412293854"/>
+            <point key="canvasLocation" x="953" y="117"/>
         </scene>
         <!--Session View-->
         <scene sceneID="gDf-iu-ds5">
@@ -909,6 +909,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DJK-JU-DmL"/>
                     </view>
+                    <connections>
+                        <outlet property="descLabel" destination="GRo-qj-U0h" id="7Zy-0s-Lzj"/>
+                        <outlet property="hoursLabel" destination="vcP-NP-1Mw" id="qJb-7a-jlV"/>
+                        <outlet property="partipantsLabel" destination="fyh-57-06t" id="3tt-TS-Cf3"/>
+                        <outlet property="titleLable" destination="Mkk-GX-jt6" id="AYW-p1-R9z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJO-x7-Rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -916,8 +922,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gyj-P2-l5i"/>
+        <segue reference="phd-jX-37n"/>
         <segue reference="KDX-L8-WHK"/>
-        <segue reference="71x-Qh-bbj"/>
+        <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
 </document>
