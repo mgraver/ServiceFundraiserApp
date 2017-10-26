@@ -95,7 +95,9 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newSession = buildSession()
         if let sessionView = segue.destination as? SessionView{
-            sessionView.currentSession = newSession
+            if segue.identifier == "NStoSessionView"{
+             sessionView.currentSession = newSession
+            }
         }
     }
     

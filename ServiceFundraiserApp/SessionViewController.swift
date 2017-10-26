@@ -36,4 +36,14 @@ class SessionView: UIViewController{
         incomeButton.isEnabled = true
         incomeButton.setTitle(String(format: "$%.2f", currentSession!.totalIncome), for: .normal)
     }
+    
+    //MARK: -Income Buttom
+    @IBAction func onIncomeClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "SVtoIncomeEdit", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
 }
