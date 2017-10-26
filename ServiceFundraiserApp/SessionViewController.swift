@@ -16,7 +16,7 @@ class SessionView: UIViewController{
     //MARK:labelPrefixes
     let titlePre = "Session Title: "
     let descPre = "Description: "
-    let hoursPre = "Total Hours: $"
+    let hoursPre = "Total Hours: "
     let participantsPre = "Total Participants: "
     
     //MARK:UIProperties
@@ -24,6 +24,7 @@ class SessionView: UIViewController{
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var partipantsLabel: UILabel!
+    @IBOutlet weak var incomeButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -32,5 +33,7 @@ class SessionView: UIViewController{
         descLabel.text = descPre + currentSession!.description
         hoursLabel.text = hoursPre + "\(currentSession!.totalHours)"
         partipantsLabel.text = participantsPre + "\(currentSession!.totalParticiapnts)"
+        incomeButton.isEnabled = true
+        incomeButton.setTitle(String(format: "$%.2f", currentSession!.totalIncome), for: .normal)
     }
 }

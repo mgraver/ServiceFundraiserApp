@@ -866,19 +866,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-6h-fZT">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-6h-fZT">
                                 <rect key="frame" x="144" y="290" width="166" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="$40,000">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.83772321428571428" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="$40,000">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.83772321428571428" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="g0X-wh-aQv" kind="show" id="ryj-YZ-Oa5"/>
@@ -912,6 +905,7 @@
                     <connections>
                         <outlet property="descLabel" destination="GRo-qj-U0h" id="7Zy-0s-Lzj"/>
                         <outlet property="hoursLabel" destination="vcP-NP-1Mw" id="qJb-7a-jlV"/>
+                        <outlet property="incomeButton" destination="zbD-6h-fZT" id="uss-Ib-evH"/>
                         <outlet property="partipantsLabel" destination="fyh-57-06t" id="3tt-TS-Cf3"/>
                         <outlet property="titleLable" destination="Mkk-GX-jt6" id="AYW-p1-R9z"/>
                     </connections>
