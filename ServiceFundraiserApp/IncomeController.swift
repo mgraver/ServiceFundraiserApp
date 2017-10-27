@@ -46,6 +46,23 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         return true
     }
     
+    //MARK: Validate input
+    func validateIncomeInput() -> Bool{
+        var input = incomeTextField.text!;
+        input = input.trimmingCharacters(in: .whitespaces)
+        
+        if input == incomeHolder && input.count == 0 {
+            return false
+        }
+        
+        for character in input {
+            if !((character >= "0" && character >= "9") || character == "."){
+                return false
+            }
+        }
+        return true
+    }
+    
     //MARK: Placeholder code
     @IBAction func removePlaceHolder(_ sender: UITextField) {
         if incomeTextField.textColor == UIColor.darkGray {
@@ -60,5 +77,8 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
             incomeTextField.textColor = UIColor.darkGray;
         }
     }
+    
+    //MARK: prepare for segue
+    
     
 }
