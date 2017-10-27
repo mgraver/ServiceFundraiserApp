@@ -7,24 +7,28 @@
 //
 
 import UIKit
-class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     //MARK: Variables
     var sessions:[Session]?
     var editSession:Session?
     let picker_data = ["Add", "Subtract"]
+    let incomeHolder = "e.g  2000.00"
     
     //MARK: IBOutlets
     @IBOutlet weak var OptionPicker: UIPickerView!
+    @IBOutlet weak var incomeTextField: UITextField!
     
     //Set up the view as needed.
     override func viewDidLoad() {
         super.viewDidLoad()
         OptionPicker.delegate = self
         OptionPicker.dataSource = self
+        incomeTextField.delegate = self
+        incomeTextField.textColor = UIColor.darkGray
     }
     
-    
+    //MARK: UIPicker setup
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -35,6 +39,26 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return picker_data[row]
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //MARK: Placeholder code
+    @IBAction func removePlaceHolder(_ sender: UITextField) {
+        if incomeTextField.textColor == UIColor.darkGray {
+            incomeTextField.textColor = UIColor.black
+            incomeTextField.text = nil
+        }
+    }
+    
+    @IBAction func addPlaceHolder(_ sender: UITextField) {
+        if incomeTextField.text!.trimmingCharacters(in: .whitespaces).count == 0 {
+            incomeTextField.text = incomeHolder
+            incomeTextField.textColor = UIColor.darkGray;
+        }
     }
     
 }

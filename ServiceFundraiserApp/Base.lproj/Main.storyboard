@@ -710,18 +710,23 @@
                                     <segue destination="cPW-OD-tmg" kind="show" id="GZ4-5n-klz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
                                 <rect key="frame" x="165" y="70" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addPlaceHolder:" destination="g0X-wh-aQv" eventType="editingDidEnd" id="hby-o1-GuW"/>
+                                    <action selector="removePlaceHolder:" destination="g0X-wh-aQv" eventType="editingDidBegin" id="5gU-sR-UCO"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="OptionPicker" destination="zIH-46-155" id="v1d-Vg-EsX"/>
+                        <outlet property="incomeTextField" destination="S30-7B-SN3" id="sgy-6u-zi8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -917,7 +922,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="phd-jX-37n"/>
+        <segue reference="GZ4-5n-klz"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
