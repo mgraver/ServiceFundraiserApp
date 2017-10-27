@@ -75,7 +75,7 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     //MARK: actions
     @IBAction func onCreateClick(_ sender: UIButton) {
-        //Add code
+       
     }
     
 }
