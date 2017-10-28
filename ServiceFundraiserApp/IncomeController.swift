@@ -46,7 +46,7 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         return true
     }
     
-    //MARK: Validate input
+    //MARK: manage input
     func validateIncomeInput() -> Bool{
         let input = incomeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines);
         
@@ -55,11 +55,16 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         }
         
         for character in input {
-            if (character < "0" || character > "9") && character != "."{
+            if (character < "0" || character > "9") && character != "." {
                 return false
             }
         }
         return true
+    }
+    
+    //Convert the valid string to flaot
+    func inputToFloat(input:String) -> Float{
+        return (input as NSString).floatValue
     }
     
     //MARK: Placeholder code
