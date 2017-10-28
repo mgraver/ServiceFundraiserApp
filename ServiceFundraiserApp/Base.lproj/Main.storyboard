@@ -595,9 +595,6 @@
                                 <rect key="frame" x="294" y="20" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="cPW-OD-tmg" kind="show" id="GZ4-5n-klz"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
                                 <rect key="frame" x="165" y="70" width="152" height="30"/>
@@ -616,6 +613,7 @@
                     <connections>
                         <outlet property="OptionPicker" destination="zIH-46-155" id="v1d-Vg-EsX"/>
                         <outlet property="incomeTextField" destination="S30-7B-SN3" id="sgy-6u-zi8"/>
+                        <segue destination="cPW-OD-tmg" kind="show" identifier="incomeToSV" id="s0L-ce-Kcg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -811,7 +809,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GZ4-5n-klz"/>
+        <segue reference="s0L-ce-Kcg"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
