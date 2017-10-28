@@ -48,16 +48,15 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     
     //MARK: Validate input
     func validateIncomeInput() -> Bool{
-        var input = incomeTextField.text!;
-        input = input.trimmingCharacters(in: .whitespaces)
+        let input = incomeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines);
         
         if input == incomeHolder && input.count == 0 {
             return false
         }
         
         for character in input {
-            if !((character >= "0" && character >= "9") || character == "."){
-                print("if2")
+            if (character <= "0" || character >= "9") && character != "."{
+                print("if2 char is: \(character)")
                 return false
             }
         }
@@ -81,6 +80,4 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     }
     
     //MARK: prepare for segue
-    
-    
 }
