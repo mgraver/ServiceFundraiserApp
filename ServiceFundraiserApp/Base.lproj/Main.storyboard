@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -204,7 +204,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ehb-mH-xgf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Boa-yj-qGD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-zB-i31">
@@ -503,7 +503,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5CI-vZ-tqC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RbL-ry-5fz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl2-fx-LmT">
@@ -577,7 +577,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oBg-iR-PdU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8pj-LG-WkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miw-1q-PRq">
@@ -714,7 +714,7 @@
             <objects>
                 <viewController storyboardIdentifier="SessionViewController" id="cPW-OD-tmg" customClass="SessionView" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ct-bD-EYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rv5-vD-mvj">
@@ -811,7 +811,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uxc-CY-M5t"/>
+        <segue reference="GZ4-5n-klz"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
