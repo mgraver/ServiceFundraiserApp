@@ -17,5 +17,6 @@ class SessionView: UIViewController
     {
         super.viewDidLoad()
         //Code...
+        print(currentSession?.name)
     }
 }
