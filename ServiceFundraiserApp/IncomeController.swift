@@ -28,6 +28,12 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         incomeTextField.textColor = UIColor.darkGray
     }
     
+    
+    @IBAction func doneClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "incomeToSV", sender: self);
+    }
+    
+    
     //MARK: UIPicker setup
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -63,8 +69,8 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     }
     
     //Convert the valid string to flaot
-    func inputToFloat(input:String) -> Float{
-        return (input as NSString).floatValue
+    func inputToFloat(input:String) -> Double{
+        return (input as NSString).doubleValue
     }
     
     //MARK: Placeholder code
@@ -84,4 +90,21 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     }
     
     //MARK: prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let sessionView = segue.destination as? SessionView {
+            
+            if validateIncomeInput(){
+                let income = inputToFloat(input: incomeTextField.text!)
+                if OptionPicker.selectedRow(inComponent: 0) == 0 {
+                    editSession?.totalIncome += income
+                }
+                else
+                {
+                    editSession?.totalIncome -= income
+                }
+            }
+            sessionView.currentSession = editSession;
+        }
+    }
+    
 }
