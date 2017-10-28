@@ -55,8 +55,7 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         }
         
         for character in input {
-            if (character <= "0" || character >= "9") && character != "."{
-                print("if2 char is: \(character)")
+            if (character < "0" || character > "9") && character != "."{
                 return false
             }
         }
