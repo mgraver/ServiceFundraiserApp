@@ -57,6 +57,7 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         
         for character in input {
             if !((character >= "0" && character >= "9") || character == "."){
+                print("if2")
                 return false
             }
         }
@@ -76,6 +77,7 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
             incomeTextField.text = incomeHolder
             incomeTextField.textColor = UIColor.darkGray;
         }
+        print(validateIncomeInput())
     }
     
     //MARK: prepare for segue
