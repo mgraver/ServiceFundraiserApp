@@ -663,8 +663,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
-                                    <action selector="onCreateClick:" destination="qW5-2x-NsQ" eventType="touchUpInside" id="I7M-eB-ZLr"/>
-                                    <segue destination="cPW-OD-tmg" kind="show" id="gyj-P2-l5i"/>
+                                    <action selector="onCreateClick:" destination="qW5-2x-NsQ" eventType="touchDown" id="CNJ-p9-8Yk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-t0-H15">
