@@ -11,7 +11,8 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     //MARK:passed data
     var sessions:[Session]?
-    
+    let titlePlaceHolder = "Enter Title Here"
+    let descPlaceHolder = "Enter your description here."
     //MARK:UIFields
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descrTextView: UITextView!
@@ -36,7 +37,7 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     @IBAction func checkEmpty(_ sender: UITextField) {
         if sender.text!.trimmingCharacters(in: .whitespaces).count == 0 {
             sender.textColor = UIColor.darkGray
-            sender.text = "Enter Title Here"
+            sender.text = titlePlaceHolder
         }
     }
     
@@ -64,16 +65,28 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text!.trimmingCharacters(in: .whitespaces).count == 0{
             textView.textColor = UIColor.darkGray
-            textView.text = "Enter your description here."
+            textView.text = descPlaceHolder
         }
     }
     
     //Check to make sure title was entered.
     func validateTitle() -> Bool{
-        return true;
+        if titleTextField.text == titlePlaceHolder {
+            return false
+        }
+        return true
     }
     
-    //MARK: actions
+    func buildSession() -> Session {
+        var description:String = "N/A"
+        if descrTextView.text != descPlaceHolder{
+            description = descrTextView.text
+        }
+        let newSession = Session(SessionTitle: titleTextField.text!, Description: description)
+        return newSession
+    }
+    
+    
     @IBAction func onCreateClick(_ sender: UIButton) {
        
     }

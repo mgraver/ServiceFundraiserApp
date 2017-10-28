@@ -599,18 +599,23 @@
                                     <segue destination="cPW-OD-tmg" kind="show" id="GZ4-5n-klz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
                                 <rect key="frame" x="165" y="70" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addPlaceHolder:" destination="g0X-wh-aQv" eventType="editingDidEnd" id="hby-o1-GuW"/>
+                                    <action selector="removePlaceHolder:" destination="g0X-wh-aQv" eventType="editingDidBegin" id="5gU-sR-UCO"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="OptionPicker" destination="zIH-46-155" id="v1d-Vg-EsX"/>
+                        <outlet property="incomeTextField" destination="S30-7B-SN3" id="sgy-6u-zi8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -668,7 +673,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title=" &lt; Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="71x-Qh-bbj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="NStoHomeView" id="71x-Qh-bbj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZB-mL-1WZ">
@@ -698,11 +703,12 @@
                     <connections>
                         <outlet property="descrTextView" destination="xT4-GR-wew" id="fnf-Ba-bNm"/>
                         <outlet property="titleTextField" destination="CxA-qr-L7x" id="KWd-FO-h6B"/>
+                        <segue destination="cPW-OD-tmg" kind="show" identifier="NStoSessionView" id="phd-jX-37n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgd-gT-4bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.60000000000002" y="116.49175412293854"/>
+            <point key="canvasLocation" x="953" y="117"/>
         </scene>
         <!--Session View-->
         <scene sceneID="gDf-iu-ds5">
@@ -755,22 +761,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-6h-fZT">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-6h-fZT">
                                 <rect key="frame" x="144" y="290" width="166" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="$40,000">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.83772321428571428" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="$40,000">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.83772321428571428" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g0X-wh-aQv" kind="show" id="ryj-YZ-Oa5"/>
+                                    <action selector="onIncomeClick:" destination="cPW-OD-tmg" eventType="touchDown" id="5ck-S0-BWa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixt-gJ-6Hr">
@@ -798,6 +797,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DJK-JU-DmL"/>
                     </view>
+                    <connections>
+                        <outlet property="descLabel" destination="GRo-qj-U0h" id="7Zy-0s-Lzj"/>
+                        <outlet property="hoursLabel" destination="vcP-NP-1Mw" id="qJb-7a-jlV"/>
+                        <outlet property="incomeButton" destination="zbD-6h-fZT" id="uss-Ib-evH"/>
+                        <outlet property="partipantsLabel" destination="fyh-57-06t" id="3tt-TS-Cf3"/>
+                        <outlet property="titleLable" destination="Mkk-GX-jt6" id="AYW-p1-R9z"/>
+                        <segue destination="g0X-wh-aQv" kind="show" identifier="SVtoIncomeEdit" id="IrY-xE-Ze3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJO-x7-Rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -807,6 +814,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Uxc-CY-M5t"/>
         <segue reference="KDX-L8-WHK"/>
-        <segue reference="IaV-4p-UlA"/>
+        <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
 </document>

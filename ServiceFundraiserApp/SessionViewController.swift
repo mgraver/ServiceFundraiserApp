@@ -19,4 +19,5 @@ class SessionView: UIViewController
         //Code...
         print(currentSession?.name)
     }
+    
 }
