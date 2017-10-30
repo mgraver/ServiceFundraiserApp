@@ -143,7 +143,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3l-KP-OaF">
@@ -204,7 +204,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ehb-mH-xgf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Boa-yj-qGD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-zB-i31">
@@ -503,7 +503,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5CI-vZ-tqC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RbL-ry-5fz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl2-fx-LmT">
@@ -512,7 +512,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title=" &lt; Back"/>
                                 <connections>
-                                    <segue destination="ycD-gO-CX7" kind="show" id="Zga-i0-eOY"/>
+                                    <segue destination="ycD-gO-CX7" kind="show" identifier="" id="Zga-i0-eOY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q35-Eb-kW3">
@@ -552,6 +552,9 @@
                                 <color key="backgroundColor" red="0.87071700510000005" green="0.87071700510000005" blue="0.87071700510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <segue destination="ycD-gO-CX7" kind="show" identifier="update" id="uBS-nb-kiA"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="User input for new worker name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-LN-DND">
                                 <rect key="frame" x="97" y="86" width="262" height="30"/>
@@ -812,7 +815,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Uxc-CY-M5t"/>
-        <segue reference="KDX-L8-WHK"/>
+        <segue reference="uBS-nb-kiA"/>
         <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
 </document>
