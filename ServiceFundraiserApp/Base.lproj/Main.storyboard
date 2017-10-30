@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -580,7 +580,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oBg-iR-PdU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8pj-LG-WkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miw-1q-PRq">
@@ -599,7 +599,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="cPW-OD-tmg" kind="show" id="GZ4-5n-klz"/>
+                                    <action selector="doneClick:" destination="g0X-wh-aQv" eventType="touchDown" id="Ch0-lE-m2D"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
@@ -619,6 +619,7 @@
                     <connections>
                         <outlet property="OptionPicker" destination="zIH-46-155" id="v1d-Vg-EsX"/>
                         <outlet property="incomeTextField" destination="S30-7B-SN3" id="sgy-6u-zi8"/>
+                        <segue destination="cPW-OD-tmg" kind="show" identifier="incomeToSV" id="s0L-ce-Kcg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -717,7 +718,7 @@
             <objects>
                 <viewController storyboardIdentifier="SessionViewController" id="cPW-OD-tmg" customClass="SessionView" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ct-bD-EYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rv5-vD-mvj">
