@@ -15,7 +15,7 @@ class Session
     var totalIncome:Double
     var totalHours:Double
     var totalParticiapnts:Int
-    //var participantsArray = [Worker]()
+    var participantsArray:[Worker]
     
     init(SessionTitle: String, Description: String)
     {
@@ -24,5 +24,6 @@ class Session
         totalIncome = 0
         totalHours = 0
         totalParticiapnts = 0
+        participantsArray = []
     }
 }

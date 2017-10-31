@@ -8,8 +8,7 @@
 
 import Foundation
 class Worker{
-    public var firstName:String
-    public var lastName:String
+    public var name:String
     public var clockIn:Date?
     private var _hours:Float
     
@@ -24,22 +23,19 @@ class Worker{
     
     
     init() {
-        firstName = ""
-        lastName = ""
+        name = ""
         _hours = 0
         clockIn = nil
     }
     
-    init(_first:String, _last:String) {
-        firstName = _first
-        lastName = _last
+    init(_name:String) {
+        name = _name
         _hours = 0
         clockIn = nil
     }
     
-    init(_first:String, _last:String, _Start:Date) {
-        firstName = _first
-        lastName = _last
+    init(_name:String, _Start:Date) {
+        name = _name
         _hours = 0
         clockIn = _Start
     }

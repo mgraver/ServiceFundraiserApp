@@ -47,6 +47,15 @@ class SessionView: UIViewController{
             if let incomeController = segue.destination as? IncomeController{
                 incomeController.editSession = currentSession
             }
+            
+            if segue.identifier == "toWorkerViewController"
+            {
+                if let workerController = segue.destination as? WorkerViewController
+                {
+                    print("INSIDE SESSION name: " + currentSession!.name)
+                    workerController.session = currentSession
+                }
+            }
         }
     }
     

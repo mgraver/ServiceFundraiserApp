@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -195,16 +195,16 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Worker View Controller-->
         <scene sceneID="GYD-tK-uSB">
             <objects>
-                <viewController id="ycD-gO-CX7" sceneMemberID="viewController">
+                <viewController id="ycD-gO-CX7" customClass="WorkerViewController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="exw-HY-k5u"/>
                         <viewControllerLayoutGuide type="bottom" id="ehb-mH-xgf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Boa-yj-qGD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-zB-i31">
@@ -275,41 +275,23 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6e-Qb-uCi">
                                 <rect key="frame" x="143" y="132" width="203" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Clocked-In Time">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-VI-FWm">
                                 <rect key="frame" x="165" y="173" width="194" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Clocked-Out Time">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-zt-qTB">
                                 <rect key="frame" x="249" y="88" width="110" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="XX Hours...">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-59-Mbt">
-                                <rect key="frame" x="43" y="305" width="279" height="30"/>
+                                <rect key="frame" x="43" y="305" width="308" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cph-L3-ars">
@@ -317,9 +299,12 @@
                                         <color key="backgroundColor" red="0.87071700510000005" green="0.87071700510000005" blue="0.87071700510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Add Worker"/>
+                                        <connections>
+                                            <action selector="addWorker" destination="ycD-gO-CX7" eventType="touchUpInside" id="u4m-un-ycs"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" text="User input worker name..." borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzA-si-vWX">
-                                        <rect key="frame" x="71" y="0.0" width="208" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Type new worker's name here" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzA-si-vWX">
+                                        <rect key="frame" x="71" y="0.0" width="237" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -347,7 +332,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRn-1l-V7W">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRn-1l-V7W" customClass="workerNameCell">
                                                     <rect key="frame" x="0.0" y="0.0" width="271" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <nil key="textColor"/>
@@ -368,20 +353,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="54f-BU-cUq" id="d3G-JN-qla">
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Be-xs-3hx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2Be-xs-3hx" firstAttribute="leading" secondItem="d3G-JN-qla" secondAttribute="leading" id="6Sh-aq-Uxn"/>
-                                                <constraint firstItem="2Be-xs-3hx" firstAttribute="trailing" secondItem="d3G-JN-qla" secondAttribute="trailingMargin" id="Arl-Ss-zw7"/>
-                                                <constraint firstItem="2Be-xs-3hx" firstAttribute="top" secondItem="d3G-JN-qla" secondAttribute="top" id="RfO-Ja-GPv"/>
-                                                <constraint firstItem="2Be-xs-3hx" firstAttribute="centerY" secondItem="d3G-JN-qla" secondAttribute="centerY" id="Ydj-T3-KWq"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sXe-uO-5nn">
@@ -390,20 +361,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sXe-uO-5nn" id="qv0-KP-RbZ">
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02R-TX-cKp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="02R-TX-cKp" firstAttribute="centerY" secondItem="qv0-KP-RbZ" secondAttribute="centerY" id="19t-h3-wfG"/>
-                                                <constraint firstItem="02R-TX-cKp" firstAttribute="top" secondItem="qv0-KP-RbZ" secondAttribute="top" id="1TY-ty-wNS"/>
-                                                <constraint firstItem="02R-TX-cKp" firstAttribute="leading" secondItem="qv0-KP-RbZ" secondAttribute="leading" id="6jp-KL-iQM"/>
-                                                <constraint firstItem="02R-TX-cKp" firstAttribute="trailing" secondItem="qv0-KP-RbZ" secondAttribute="trailingMargin" id="6sN-KQ-u1l"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9xH-uc-xJg">
@@ -412,20 +369,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9xH-uc-xJg" id="6NK-QX-YfY">
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42L-5v-yhO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="42L-5v-yhO" firstAttribute="top" secondItem="6NK-QX-YfY" secondAttribute="top" id="258-fS-i5H"/>
-                                                <constraint firstItem="42L-5v-yhO" firstAttribute="trailing" secondItem="6NK-QX-YfY" secondAttribute="trailingMargin" id="Bcf-o3-UWO"/>
-                                                <constraint firstItem="42L-5v-yhO" firstAttribute="centerY" secondItem="6NK-QX-YfY" secondAttribute="centerY" id="dHi-I6-eDz"/>
-                                                <constraint firstItem="42L-5v-yhO" firstAttribute="leading" secondItem="6NK-QX-YfY" secondAttribute="leading" id="u7a-SZ-huh"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="I0W-Ud-KhQ">
@@ -434,20 +377,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I0W-Ud-KhQ" id="v9r-Yq-26c">
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23j-FA-cL6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="23j-FA-cL6" firstAttribute="centerY" secondItem="v9r-Yq-26c" secondAttribute="centerY" id="5wb-bQ-ISh"/>
-                                                <constraint firstItem="23j-FA-cL6" firstAttribute="top" secondItem="v9r-Yq-26c" secondAttribute="top" id="TFe-8C-3LW"/>
-                                                <constraint firstItem="23j-FA-cL6" firstAttribute="trailing" secondItem="v9r-Yq-26c" secondAttribute="trailingMargin" id="h5C-Am-uzn"/>
-                                                <constraint firstItem="23j-FA-cL6" firstAttribute="leading" secondItem="v9r-Yq-26c" secondAttribute="leading" id="ySU-IX-0HX"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="i7O-KU-5MM">
@@ -456,20 +385,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i7O-KU-5MM" id="aJb-To-hLS">
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-4P-6dW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="7aB-4P-6dW" firstAttribute="top" secondItem="aJb-To-hLS" secondAttribute="top" id="0cL-38-gWM"/>
-                                                <constraint firstItem="7aB-4P-6dW" firstAttribute="leading" secondItem="aJb-To-hLS" secondAttribute="leading" id="2gb-0G-91P"/>
-                                                <constraint firstItem="7aB-4P-6dW" firstAttribute="trailing" secondItem="aJb-To-hLS" secondAttribute="trailingMargin" id="gAe-h5-qsi"/>
-                                                <constraint firstItem="7aB-4P-6dW" firstAttribute="centerY" secondItem="aJb-To-hLS" secondAttribute="centerY" id="pHq-vC-PxC"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -477,18 +392,22 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1W-If-ZDt">
                                 <rect key="frame" x="97" y="57" width="262" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Volunteers name...">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ClockInOutButton" destination="ylZ-a8-7xm" id="vOd-Ol-tCc"/>
+                        <outlet property="EditButton" destination="Bz2-MI-qXy" id="aBq-ao-fep"/>
+                        <outlet property="addWorkerNameInput" destination="fzA-si-vWX" id="Gew-jW-6Jt"/>
+                        <outlet property="clockInLabel" destination="l6e-Qb-uCi" id="Rzg-lr-gwI"/>
+                        <outlet property="clockOutLabel" destination="gb1-VI-FWm" id="elT-e8-rvc"/>
+                        <outlet property="hoursLabel" destination="Nwt-zt-qTB" id="0lG-e1-pEs"/>
+                        <outlet property="nameLabel" destination="t1W-If-ZDt" id="rVL-iM-WcW"/>
+                        <outlet property="workerTable" destination="Wwa-B8-CgL" id="3om-lK-7nh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEn-dV-L5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -503,7 +422,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5CI-vZ-tqC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RbL-ry-5fz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl2-fx-LmT">
@@ -580,7 +499,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oBg-iR-PdU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8pj-LG-WkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miw-1q-PRq">
@@ -631,7 +550,7 @@
             <objects>
                 <viewController id="qW5-2x-NsQ" customClass="NewSessionController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1U-6N-QO7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Title Here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-qr-L7x">
@@ -718,7 +637,7 @@
             <objects>
                 <viewController storyboardIdentifier="SessionViewController" id="cPW-OD-tmg" customClass="SessionView" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ct-bD-EYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rv5-vD-mvj">
@@ -793,7 +712,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Participants"/>
                                 <connections>
-                                    <segue destination="ycD-gO-CX7" kind="show" id="KDX-L8-WHK"/>
+                                    <segue destination="ycD-gO-CX7" kind="show" identifier="toWorkerViewController" id="KDX-L8-WHK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -816,7 +735,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Uxc-CY-M5t"/>
-        <segue reference="uBS-nb-kiA"/>
+        <segue reference="KDX-L8-WHK"/>
         <segue reference="MIx-q2-dBj"/>
     </inferredMetricsTieBreakers>
 </document>
