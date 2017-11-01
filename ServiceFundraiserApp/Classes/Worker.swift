@@ -8,9 +8,9 @@
 
 import Foundation
 class Worker{
-    public var name:String
-    public var clockIn:Date?
-    private var _hours:Float
+    var name:String
+    var clockIn:Date?
+    var _hours:Float
     
     var hours:Float{
         get { return _hours}

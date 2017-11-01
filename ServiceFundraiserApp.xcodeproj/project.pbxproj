@@ -14,6 +14,7 @@
 		36B2218E1FA7D22D004AF8CF /* WorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */; };
 		36D10CE11FA1167700FB22ED /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D10CDF1FA1167700FB22ED /* Worker.swift */; };
 		36D10CE21FA1167700FB22ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D10CE01FA1167700FB22ED /* Assets.xcassets */; };
+		36D3A1141FA8E554005DE2FB /* EditWorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3A1131FA8E554005DE2FB /* EditWorkerViewController.swift */; };
 		4C3116061F9905C800E025F9 /* IncomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3116051F9905C800E025F9 /* IncomeController.swift */; };
 		4C5EC8F31F96A01400343196 /* NewSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F21F96A01400343196 /* NewSessionController.swift */; };
 		4C5EC8F71F96A12300343196 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F61F96A12300343196 /* SessionViewController.swift */; };
@@ -32,6 +33,7 @@
 		36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerViewController.swift; sourceTree = "<group>"; };
 		36D10CDF1FA1167700FB22ED /* Worker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		36D10CE01FA1167700FB22ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36D3A1131FA8E554005DE2FB /* EditWorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkerViewController.swift; sourceTree = "<group>"; };
 		4C3116051F9905C800E025F9 /* IncomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeController.swift; sourceTree = "<group>"; };
 		4C5EC8F21F96A01400343196 /* NewSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionController.swift; sourceTree = "<group>"; };
 		4C5EC8F61F96A12300343196 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,25 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		36D3A1151FA8E55E005DE2FB /* Worker View */ = {
+			isa = PBXGroup;
+			children = (
+				36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */,
+				36D3A1131FA8E554005DE2FB /* EditWorkerViewController.swift */,
+			);
+			path = "Worker View";
+			sourceTree = "<group>";
+		};
+		36D3A1161FA8E57C005DE2FB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4412F1F8E98A600D640F8 /* TimeStamp.swift */,
+				366481631F9FCD040095D6C0 /* Session.swift */,
+				36D10CDF1FA1167700FB22ED /* Worker.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		4CE441111F8E985E00D640F8 = {
 			isa = PBXGroup;
 			children = (
@@ -100,14 +121,12 @@
 				4C5EC8F21F96A01400343196 /* NewSessionController.swift */,
 				4C5EC8F61F96A12300343196 /* SessionViewController.swift */,
 				4C3116051F9905C800E025F9 /* IncomeController.swift */,
-				36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */,
 				4CE441211F8E985F00D640F8 /* Main.storyboard */,
 				4CE441261F8E985F00D640F8 /* LaunchScreen.storyboard */,
-				4CE4412F1F8E98A600D640F8 /* TimeStamp.swift */,
-				366481631F9FCD040095D6C0 /* Session.swift */,
-				36D10CE01FA1167700FB22ED /* Assets.xcassets */,
-				36D10CDF1FA1167700FB22ED /* Worker.swift */,
+				36D3A1161FA8E57C005DE2FB /* Classes */,
+				36D3A1151FA8E55E005DE2FB /* Worker View */,
 				36465E291FA3DB5500E508A1 /* List of Sessions */,
+				36D10CE01FA1167700FB22ED /* Assets.xcassets */,
 			);
 			path = ServiceFundraiserApp;
 			sourceTree = "<group>";
@@ -188,6 +207,7 @@
 				366481641F9FCD040095D6C0 /* Session.swift in Sources */,
 				36D10CE11FA1167700FB22ED /* Worker.swift in Sources */,
 				36465E2F1FA3DD4400E508A1 /* SessionTableViewController.swift in Sources */,
+				36D3A1141FA8E554005DE2FB /* EditWorkerViewController.swift in Sources */,
 				4CE441201F8E985E00D640F8 /* ViewController.swift in Sources */,
 				4C5EC8F31F96A01400343196 /* NewSessionController.swift in Sources */,
 				36465E281FA3DB4F00E508A1 /* ListOfSessionsViewController.swift in Sources */,
