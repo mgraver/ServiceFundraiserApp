@@ -461,7 +461,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oBg-iR-PdU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8pj-LG-WkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miw-1q-PRq">
@@ -599,7 +599,7 @@
             <objects>
                 <viewController storyboardIdentifier="SessionViewController" id="cPW-OD-tmg" customClass="SessionView" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ct-bD-EYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rv5-vD-mvj">
@@ -697,7 +697,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dkS-pv-rSc"/>
-        <segue reference="Uxc-CY-M5t"/>
+        <segue reference="pho-S6-xAb"/>
         <segue reference="uBS-nb-kiA"/>
         <segue reference="IaV-4p-UlA"/>
     </inferredMetricsTieBreakers>
