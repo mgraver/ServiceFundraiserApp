@@ -22,12 +22,12 @@ class EditWorkerViewController: UIViewController {
         super.viewDidLoad()
         
         newNameInput.text = worker.name
-        newHoursInput.text = String(worker._hours.clean)
+        newHoursInput.text = String(worker.hours.clean)
     }
     
     func updateWorker()
     {
-        worker._hours = (newHoursInput.text! as NSString).floatValue
+        worker.hours = (newHoursInput.text! as NSString).floatValue
         worker.name = newNameInput.text!
         workers[index] = worker
     }
