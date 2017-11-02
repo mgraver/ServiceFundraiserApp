@@ -78,7 +78,6 @@ class Session: NSObject, NSCoding
         }
         
         totalHours = hours
-        print("HOURS: " + String(hours))
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
