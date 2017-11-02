@@ -30,11 +30,15 @@ class EditWorkerViewController: UIViewController {
         worker.hours = (newHoursInput.text! as NSString).floatValue
         worker.name = newNameInput.text!
         workers[index] = worker
+        session.updateSessionHours()
+        session.updateWorkersPay()
     }
     
     func deleteWorker()
     {
         workers.remove(at: index)
+        session.updateSessionHours()
+        session.updateWorkersPay()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -45,6 +49,7 @@ class EditWorkerViewController: UIViewController {
             {
                 workerView.session = session
                 workerView.workers = workers
+                workerView.selectedIndex = index
             }
         }
         
@@ -54,6 +59,7 @@ class EditWorkerViewController: UIViewController {
             {
                 deleteWorker()
                 session.participantsArray = workers
+                session.totalParticipants = workers.count
                 
                 workerView.session = session
                 workerView.workers = workers
@@ -69,6 +75,7 @@ class EditWorkerViewController: UIViewController {
                 
                 workerView.session = session
                 workerView.workers = workers
+                workerView.selectedIndex = index
             }
         }
     }

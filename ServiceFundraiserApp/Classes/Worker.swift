@@ -11,7 +11,7 @@ import os.log
 class Worker: NSObject, NSCoding {
     
     public var name:String
-    public var clockIn:Date?
+    public var income:Float
     private var _hours:Float
     
     var hours:Float{
@@ -27,24 +27,24 @@ class Worker: NSObject, NSCoding {
     override init() {
         name = ""
         _hours = 0
-        clockIn = nil
+        income = 0
     }
     
     init(_name:String) {
         name = _name
         _hours = 0
-        clockIn = nil
+        income = 0
     }
     
-    init(_name:String, _Start:Date) {
+    init(_name:String, _income:Float) {
         name = _name
         _hours = 0
-        clockIn = _Start
+        income = _income
     }
     
-    init(_name:String, _Start:Date?, _hours:Float) {
+    init(_name:String, _income:Float, _hours:Float) {
         name = _name
-        clockIn = _Start
+        income = _income
         self._hours = _hours
     }
     
@@ -59,13 +59,13 @@ class Worker: NSObject, NSCoding {
     //MARK: NScoding
     struct workerKey {
         static let name = "WorkerName"
-        static let clockIn = "WorkerClockIn"
+        static let income = "WorkerIncome"
         static let hours = "workerHours"
     }
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: workerKey.name)
-        aCoder.encode(clockIn, forKey: workerKey.clockIn)
+        aCoder.encode(income, forKey: workerKey.income)
         aCoder.encode(_hours, forKey: workerKey.hours)
     }
     
@@ -76,14 +76,14 @@ class Worker: NSObject, NSCoding {
                 return nil
         }
         
-        let clkIn = aDecoder.decodeObject(forKey: workerKey.clockIn) as? Date
+        let inc = aDecoder.decodeObject(forKey: workerKey.income) as? Float
         guard let hrs = aDecoder.decodeObject(forKey: workerKey.hours) as? Float
             else {
                 os_log("Failed to load worker hours.", log: OSLog.default, type: .debug)
                 return nil
         }
         
-        self.init(_name: name, _Start: clkIn, _hours: hrs)
+        self.init(_name: name, _income: inc!, _hours: hrs)
     }
     
 }

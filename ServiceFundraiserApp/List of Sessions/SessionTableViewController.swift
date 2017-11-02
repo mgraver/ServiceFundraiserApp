@@ -54,7 +54,7 @@ class SessionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SessionTableViewCell
         
         cell.projectName.text = searchedSessions[indexPath.row].name
-        cell.projectInfo.text = searchedSessions[indexPath.row].description
+        cell.projectInfo.text = searchedSessions[indexPath.row].sesDescription
         
         return cell
     }

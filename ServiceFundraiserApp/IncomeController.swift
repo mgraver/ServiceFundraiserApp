@@ -102,6 +102,7 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
                 {
                     editSession?.totalIncome -= income
                 }
+                editSession?.updateWorkersPay()
             }
             sessionView.currentSession = editSession;
         }

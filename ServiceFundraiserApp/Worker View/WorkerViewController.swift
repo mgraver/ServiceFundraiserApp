@@ -15,6 +15,11 @@ extension Float
     {
         return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(format: "%.1f", self)
     }
+    
+    var money: String
+    {
+        return String(format: "%.2f", self)
+    }
 }
 
 class WorkerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
@@ -23,9 +28,7 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
     var workers: [Worker]!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var hoursLabel: UILabel!
-    @IBOutlet var clockInLabel: UILabel!
-    @IBOutlet var clockOutLabel: UILabel!
-    @IBOutlet var ClockInOutButton: UIButton!
+    @IBOutlet var incomeContributedLabel: UILabel!
     @IBOutlet var EditButton: UIButton!
     @IBOutlet var addWorkerNameInput: UITextField!
     @IBOutlet var workerTable: UITableView!
@@ -39,10 +42,14 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
 
         workers = session.participantsArray
         
-        if workers.count != 0
+        if workers.count != 0 && selectedIndex == nil
         {
             initializeInfo(worker: workers[0])  // Initially displays worker at top of workers list
             selectedIndex = 0
+        }
+        else if workers.count != 0
+        {
+            initializeInfo(worker: workers[selectedIndex])
         }
     }
     
@@ -74,10 +81,7 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
     {
         nameLabel.text = (worker.name)
         hoursLabel.text = String(describing: worker.hours.clean) + " hours"
-        if (worker.clockIn != nil)
-        {
-            clockInLabel.text = String(describing: worker.clockIn)
-        }
+        incomeContributedLabel.text = "$" + String(describing: worker.income.money)
     }
     
     @IBAction func addWorker()
@@ -99,6 +103,7 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
                 workers.append(Worker(_name: addWorkerNameInput.text!))
                 workers.sort(by: sorterForWorkerTable)
                 session.participantsArray = workers
+                session.totalParticipants = workers.count
                 workerTable.reloadData()
                 
                 if (workers.count == 1)

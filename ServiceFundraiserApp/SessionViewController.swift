@@ -30,9 +30,9 @@ class SessionView: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLable.text = titlePre + currentSession!.name
-        descLabel.text = descPre + currentSession!.description
+        descLabel.text = descPre + currentSession!.sesDescription
         hoursLabel.text = hoursPre + "\(currentSession!.totalHours)"
-        partipantsLabel.text = participantsPre + "\(currentSession!.totalParticiapnts)"
+        partipantsLabel.text = participantsPre + "\(currentSession!.totalParticipants)"
         incomeButton.isEnabled = true
         incomeButton.setTitle(String(format: "$%.2f", currentSession!.totalIncome), for: .normal)
     }

@@ -15,7 +15,7 @@ class Session: NSObject, NSCoding
     var sesDescription:String
     var totalIncome:Double
     var totalHours:Double
-    var totalParticiapnts:Int
+    var totalParticipants:Int
     var participantsArray:[Worker]
     
     init(SessionTitle: String, Description: String)
@@ -24,7 +24,7 @@ class Session: NSObject, NSCoding
         sesDescription = Description
         totalIncome = 0
         totalHours = 0
-        totalParticiapnts = 0
+        totalParticipants = 0
         participantsArray = []
     }
     
@@ -35,7 +35,7 @@ class Session: NSObject, NSCoding
         sesDescription = Description
         totalIncome = tIncome
         totalHours = tHours
-        totalParticiapnts = tParticiapnts
+        totalParticipants = tParticiapnts
         participantsArray = pArray
     }
     
@@ -44,7 +44,7 @@ class Session: NSObject, NSCoding
         static let description = "description"
         static let totalIncome = "totalIncome"
         static let totalHours = "totalHours"
-        static let totalParticiapnts = "totalParticiapnts"
+        static let totalParticipants = "totalParticipants"
         static let participantsArray = "participantsArray"
     }
     
@@ -54,8 +54,30 @@ class Session: NSObject, NSCoding
         aCoder.encode(sesDescription, forKey: sessionKey.description)
         aCoder.encode(totalIncome, forKey: sessionKey.totalIncome)
         aCoder.encode(totalHours, forKey: sessionKey.totalHours)
-        aCoder.encode(totalParticiapnts, forKey: sessionKey.totalParticiapnts)
+        aCoder.encode(totalParticipants, forKey: sessionKey.totalParticipants)
         aCoder.encode(participantsArray, forKey: sessionKey.participantsArray)
+    }
+    
+    func updateWorkersPay()
+    {
+        let payPerHour: Float = Float(totalIncome / totalHours)
+        
+        for worker in participantsArray
+        {
+            worker.income = worker.hours * payPerHour
+        }
+    }
+    
+    func updateSessionHours()
+    {
+        var hours: Double = 0.0
+        
+        for worker in participantsArray
+        {
+            hours += Double(worker.hours)
+        }
+        
+        totalHours = hours
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -80,7 +102,7 @@ class Session: NSObject, NSCoding
                 os_log("Failed to decode Session total hours.", log: OSLog.default, type: .debug)
                 return nil
         }
-        guard let totalParticiapnts = aDecoder.decodeObject(forKey: sessionKey.totalParticiapnts) as? Int
+        guard let totalParticipants = aDecoder.decodeObject(forKey: sessionKey.totalParticipants) as? Int
             else {
                 os_log("Failed to decode Session total particiapants.", log: OSLog.default, type: .debug)
                 return nil
@@ -92,7 +114,7 @@ class Session: NSObject, NSCoding
         }
         
         self.init(SessionTitle: name, Description: sesDescription, tIncome: totalIncome, tHours: totalHours,
-                  tParticiapnts: totalParticiapnts, pArray: participantsArray)
+                  tParticiapnts: totalParticipants, pArray: participantsArray)
     }
     
 }
