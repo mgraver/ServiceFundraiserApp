@@ -40,6 +40,8 @@ class EditWorkerViewController: UIViewController {
     func deleteWorker()
     {
         workers.remove(at: workerIndex)
+        session.participantsArray = workers
+        session.totalParticipants = workers.count
         session.updateSessionHours()
         session.updateWorkersPay()
     }
@@ -62,8 +64,6 @@ class EditWorkerViewController: UIViewController {
             if let workerView = segue.destination as? WorkerViewController
             {
                 deleteWorker()
-                session.participantsArray = workers
-                session.totalParticipants = workers.count
                 
                 workerView.session = session
                 workerView.workers = workers
