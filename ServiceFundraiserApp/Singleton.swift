@@ -13,6 +13,10 @@ final class Singleton: NSObject, NSCoding
     static let sharedInstance = Singleton()
     var sessions: [Session]
     
+    //NScoding save destination
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("sessionRecords")
+    
     private override init()
     {
         sessions = []
