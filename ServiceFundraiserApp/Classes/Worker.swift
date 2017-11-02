@@ -23,7 +23,6 @@ class Worker: NSObject, NSCoding {
         }
     }
     
-    
     override init() {
         name = ""
         _hours = 0
@@ -86,5 +85,15 @@ class Worker: NSObject, NSCoding {
         self.init(_name: name, _income: inc!, _hours: hrs)
     }
     
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let obj = object as? Worker else {return false}
+        return self == obj
+    }
 }
+
+func == (lhs: Worker, rhs: Worker) -> Bool
+{
+    return lhs.name == rhs.name
+}
+
 

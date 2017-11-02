@@ -15,19 +15,22 @@ protocol TableViewControllerDelegate
 
 class SessionTableViewController: UITableViewController {
 
-    var sessions: [Session] = []
-    var searchedSessions: [Session] = []
+    var sessions: [Session]!
+    var searchedSessions: [Session]!
     var selectedSession: Session?
     var delegate:TableViewControllerDelegate! = nil
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Placeholder to fill session values
+        
+        /*// Placeholder to fill session values
         for i in 0...10
         {
-            sessions.append(Session(SessionTitle: "Blood Drive " + String(i), Description: "Giving away free blood!"))
-        }
+            Singleton.sharedInstance.sessions.append(Session(SessionTitle: "Blood Drive " + String(i), Description: "Giving away free blood!"))
+        }*/
+        
+        sessions = Singleton.sharedInstance.sessions
         
         fillTable(query: "")
         

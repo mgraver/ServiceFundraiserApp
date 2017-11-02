@@ -12,7 +12,8 @@ class EditWorkerViewController: UIViewController {
     
     var workers: [Worker]!
     var worker: Worker!
-    var index: Int!
+    var sessionIndex: Int!
+    var workerIndex: Int!
     var session: Session!
     
     @IBOutlet var newNameInput: UITextField!
@@ -20,6 +21,8 @@ class EditWorkerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        session = Singleton.sharedInstance.sessions[sessionIndex]
         
         newNameInput.text = worker.name
         newHoursInput.text = String(worker.hours.clean)
@@ -29,14 +32,14 @@ class EditWorkerViewController: UIViewController {
     {
         worker.hours = (newHoursInput.text! as NSString).floatValue
         worker.name = newNameInput.text!
-        workers[index] = worker
+        workers[workerIndex] = worker
         session.updateSessionHours()
         session.updateWorkersPay()
     }
     
     func deleteWorker()
     {
-        workers.remove(at: index)
+        workers.remove(at: workerIndex)
         session.updateSessionHours()
         session.updateWorkersPay()
     }
@@ -49,7 +52,8 @@ class EditWorkerViewController: UIViewController {
             {
                 workerView.session = session
                 workerView.workers = workers
-                workerView.selectedIndex = index
+                workerView.sessionIndex = sessionIndex
+                workerView.workerIndex = workerIndex
             }
         }
         
@@ -63,6 +67,9 @@ class EditWorkerViewController: UIViewController {
                 
                 workerView.session = session
                 workerView.workers = workers
+                workerView.sessionIndex = sessionIndex
+                
+                Singleton.sharedInstance.sessions[sessionIndex] = session
             }
         }
         
@@ -75,7 +82,10 @@ class EditWorkerViewController: UIViewController {
                 
                 workerView.session = session
                 workerView.workers = workers
-                workerView.selectedIndex = index
+                workerView.sessionIndex = sessionIndex
+                workerView.workerIndex = workerIndex
+                
+                Singleton.sharedInstance.sessions[sessionIndex] = session
             }
         }
     }

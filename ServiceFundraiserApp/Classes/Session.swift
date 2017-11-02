@@ -78,6 +78,7 @@ class Session: NSObject, NSCoding
         }
         
         totalHours = hours
+        print("HOURS: " + String(hours))
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -117,6 +118,16 @@ class Session: NSObject, NSCoding
                   tParticiapnts: totalParticipants, pArray: participantsArray)
     }
     
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let obj = object as? Session else {return false}
+        return self == obj
+    }
+    
+}
+
+func == (lhs: Session, rhs: Session) -> Bool
+{
+    return lhs.name == rhs.name && lhs.sesDescription == rhs.sesDescription && lhs.totalHours == rhs.totalHours && lhs.totalIncome == rhs.totalIncome && lhs.totalParticipants == rhs.totalParticipants
 }
 
 

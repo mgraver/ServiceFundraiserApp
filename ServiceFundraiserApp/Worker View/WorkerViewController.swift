@@ -32,7 +32,8 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet var EditButton: UIButton!
     @IBOutlet var addWorkerNameInput: UITextField!
     @IBOutlet var workerTable: UITableView!
-    var selectedIndex: Int!
+    var sessionIndex: Int!
+    var workerIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +43,14 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
 
         workers = session.participantsArray
         
-        if workers.count != 0 && selectedIndex == nil
+        if workers.count != 0 && workerIndex == nil
         {
             initializeInfo(worker: workers[0])  // Initially displays worker at top of workers list
-            selectedIndex = 0
+            workerIndex = 0
         }
         else if workers.count != 0
         {
-            initializeInfo(worker: workers[selectedIndex])
+            initializeInfo(worker: workers[workerIndex])
         }
     }
     
@@ -72,8 +73,8 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath.row
-        initializeInfo(worker: workers[selectedIndex])
+        workerIndex = indexPath.row
+        initializeInfo(worker: workers[workerIndex])
     }
     
     // Shows the info of the selected worker - or the only worker if only one exists
@@ -100,7 +101,8 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
             
             if (!workerAlreadyExists)   // Does not allow duplicate workers
             {
-                workers.append(Worker(_name: addWorkerNameInput.text!))
+                let newWorker: Worker = Worker(_name: addWorkerNameInput.text!)
+                workers.append(newWorker)
                 workers.sort(by: sorterForWorkerTable)
                 session.participantsArray = workers
                 session.totalParticipants = workers.count
@@ -109,7 +111,13 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
                 if (workers.count == 1)
                 {
                     initializeInfo(worker: workers[0])
-                    selectedIndex = 0
+                    workerIndex = 0
+                }
+                else
+                {
+                    let newIndex = workers.index(of: newWorker)
+                    initializeInfo(worker: workers[newIndex!])
+                    workerIndex = newIndex
                 }
             }
             
@@ -152,8 +160,9 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
             if let editWorkerViewController = segue.destination as? EditWorkerViewController
             {
                 editWorkerViewController.workers = workers
-                editWorkerViewController.worker = workers[selectedIndex]
-                editWorkerViewController.index = selectedIndex
+                editWorkerViewController.worker = workers[workerIndex]
+                editWorkerViewController.workerIndex = workerIndex
+                editWorkerViewController.sessionIndex = sessionIndex
                 editWorkerViewController.session = session
             }
         }

@@ -98,9 +98,16 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
         let newSession = buildSession()
         if let sessionView = segue.destination as? SessionView{
             if segue.identifier == "NStoSessionView"{
-             sessionView.currentSession = newSession
+                Singleton.sharedInstance.sessions.append(newSession)
+                Singleton.sharedInstance.sessions.sort(by: sessionSorter)
+                sessionView.currentSession = newSession
             }
         }
+    }
+    
+    // Sorts the session list alphabetically - called everytime a new session is added
+    func sessionSorter(this: Session, that: Session) -> Bool {
+        return this.name < that.name
     }
     
 }

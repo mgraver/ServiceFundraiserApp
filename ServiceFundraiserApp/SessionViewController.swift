@@ -10,8 +10,7 @@ import UIKit
 class SessionView: UIViewController{
     
     //MARK:passed variables
-    var sessions:[Session]?
-    var currentSession:Session?
+    var currentSession:Session!
     
     //MARK:labelPrefixes
     let titlePre = "Session Title: "
@@ -54,6 +53,7 @@ class SessionView: UIViewController{
             if let workerController = segue.destination as? WorkerViewController
             {
                 workerController.session = currentSession
+                workerController.sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
             }
         }
     }
