@@ -92,29 +92,20 @@ class Session: NSObject, NSCoding
                 os_log("Failed to decode Session description.", log: OSLog.default, type: .debug)
                 return nil
         }
-        guard let totalIncome = aDecoder.decodeObject(forKey: sessionKey.totalIncome) as? Double
-            else {
-                os_log("Failed to decode Session total Income.", log: OSLog.default, type: .debug)
-                return nil
-        }
-        guard let totalHours = aDecoder.decodeObject(forKey: sessionKey.totalHours) as? Double
-            else {
-                os_log("Failed to decode Session total hours.", log: OSLog.default, type: .debug)
-                return nil
-        }
-        guard let totalParticipants = aDecoder.decodeObject(forKey: sessionKey.totalParticipants) as? Int
-            else {
-                os_log("Failed to decode Session total particiapants.", log: OSLog.default, type: .debug)
-                return nil
-        }
+         let totalIncome = aDecoder.decodeDouble(forKey: sessionKey.totalIncome)
+        
+         let totalHours = aDecoder.decodeDouble(forKey: sessionKey.totalHours)
+        
+         let totalParticipants = aDecoder.decodeInteger(forKey: sessionKey.totalParticipants)
+        
         guard let participantsArray = aDecoder.decodeObject(forKey: sessionKey.participantsArray) as? [Worker]
             else {
                 os_log("Failed to decode Session array.", log: OSLog.default, type: .debug)
                 return nil
         }
         
-        self.init(SessionTitle: name, Description: sesDescription, tIncome: totalIncome, tHours: totalHours,
-                  tParticiapnts: totalParticipants, pArray: participantsArray)
+        self.init(SessionTitle: name, Description: sesDescription, tIncome:totalIncome, tHours:totalHours,
+            tParticiapnts:totalParticipants, pArray: participantsArray)
     }
     
     override func isEqual(_ object: Any?) -> Bool {

@@ -12,6 +12,7 @@ final class Singleton: NSObject, NSCoding
 {
     static let sharedInstance = Singleton()
     var sessions: [Session]
+    public var didAlreadyLoad:Bool = false
     
     //NScoding save destination
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!

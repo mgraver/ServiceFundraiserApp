@@ -71,10 +71,6 @@ class SessionView: UIViewController{
     
     //MARK: save data
     @objc func saveCurrentSession() {
-        if currentSessionIndex == nil {
-            //TODO: how to save a brand new view.
-        } else {
-            //TODO: how to save a old sessions that was eddited.
-        }
+        Singleton.sharedInstance.saveSessions()
     }
 }

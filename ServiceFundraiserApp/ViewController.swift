@@ -13,7 +13,11 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loadSessions()
+        if !Singleton.sharedInstance.didAlreadyLoad
+        {
+            Singleton.sharedInstance.didAlreadyLoad = true
+            loadSessions()
+        }
     }
 
     override func didReceiveMemoryWarning()
