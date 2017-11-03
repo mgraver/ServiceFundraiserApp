@@ -34,10 +34,6 @@ final class Singleton: NSObject, NSCoding
             os_log("Sessions failed to save.", log: OSLog.default, type: .debug)
         }
     }
-    
-    public func loadSessions() {
-        sessions = NSKeyedUnarchiver.unarchiveObject(withFile: Singleton.ArchiveURL.path) as! [Session]
-    }
 
     //MARK: NSCoding
     func encode(with aCoder: NSCoder) {
