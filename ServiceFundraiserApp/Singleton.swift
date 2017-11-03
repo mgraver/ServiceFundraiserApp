@@ -26,7 +26,19 @@ final class Singleton: NSObject, NSCoding
         self.sessions = sessions
     }
     
+    public func saveSessions() {
+        let isSuccesssfulSave = NSKeyedArchiver.archiveRootObject(sessions, toFile: Singleton.ArchiveURL.path)
+        if isSuccesssfulSave {
+            os_log("Sessions were saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Sessions failed to save.", log: OSLog.default, type: .debug)
+        }
+    }
     
+    public func loadSessions() {
+        sessions = NSKeyedUnarchiver.unarchiveObject(withFile: Singleton.ArchiveURL.path) as! [Session]
+    }
+
     //MARK: NSCoding
     func encode(with aCoder: NSCoder) {
         aCoder.encode(sessions, forKey: "sessionsArray")
