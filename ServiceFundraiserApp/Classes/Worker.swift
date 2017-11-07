@@ -75,14 +75,10 @@ class Worker: NSObject, NSCoding {
                 return nil
         }
         
-        let inc = aDecoder.decodeObject(forKey: workerKey.income) as? Float
-        guard let hrs = aDecoder.decodeObject(forKey: workerKey.hours) as? Float
-            else {
-                os_log("Failed to load worker hours.", log: OSLog.default, type: .debug)
-                return nil
-        }
+        let inc = aDecoder.decodeFloat(forKey: workerKey.income)
+        let hrs = aDecoder.decodeFloat(forKey: workerKey.hours)
         
-        self.init(_name: name, _income: inc!, _hours: hrs)
+        self.init(_name: name, _income: inc, _hours: hrs)
     }
     
     override func isEqual(_ object: Any?) -> Bool {

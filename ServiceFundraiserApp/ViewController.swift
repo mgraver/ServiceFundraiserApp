@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import os.log
 class ViewController: UIViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if !Singleton.sharedInstance.didAlreadyLoad
+        {
+            Singleton.sharedInstance.didAlreadyLoad = true
+            loadSessions()
+        }
     }
 
     override func didReceiveMemoryWarning()
@@ -22,6 +26,18 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
+    //Load privous sessions.
+    public func loadSessions() {
+        let loadedSessions = NSKeyedUnarchiver.unarchiveObject(withFile: Singleton.ArchiveURL.path) as? [Session]
+        //if saved data exits load it.
+        if loadedSessions != nil {
+            Singleton.sharedInstance.sessions = loadedSessions!
+        } else {
+            os_log("No previous data was found.", log: OSLog.default, type: .debug)
+        }
+        
+    }
+    
 
 }
 

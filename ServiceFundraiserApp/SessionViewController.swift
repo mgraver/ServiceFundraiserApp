@@ -10,8 +10,10 @@ import UIKit
 class SessionView: UIViewController{
     
     //MARK:passed variables
+    var sessions:[Session]?
     var currentSession:Session!
-    
+    var currentSessionIndex:Int?
+
     //MARK:labelPrefixes
     let titlePre = "Session Title: "
     let descPre = "Description: "
@@ -28,6 +30,14 @@ class SessionView: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Create an oberver to check when app goes into background.
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(saveCurrentSession), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        
+        //Initilize the sessiosn var
+        sessions = Singleton.sharedInstance.sessions
+        
+        //Set label text
         titleLable.text = titlePre + currentSession!.name
         descLabel.text = descPre + currentSession!.sesDescription
         hoursLabel.text = hoursPre + "\(currentSession!.totalHours)"
@@ -35,6 +45,7 @@ class SessionView: UIViewController{
         incomeButton.isEnabled = true
         incomeButton.setTitle(String(format: "$%.2f", currentSession!.totalIncome), for: .normal)
     }
+    
     
     //MARK: -Income Buttom
     @IBAction func onIncomeClick(_ sender: UIButton) {
@@ -56,5 +67,10 @@ class SessionView: UIViewController{
                 workerController.sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
             }
         }
+    }
+    
+    //MARK: save data
+    @objc func saveCurrentSession() {
+        Singleton.sharedInstance.saveSessions()
     }
 }
