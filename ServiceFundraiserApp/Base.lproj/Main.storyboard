@@ -32,15 +32,15 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-2M-nDp">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <connections>
                                     <segue destination="IGs-Xj-SQU" kind="embed" identifier="table" id="bkc-4t-U3V"/>
                                 </connections>
                             </containerView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccJ-Yf-5bY">
                                 <rect key="frame" x="0.0" y="62" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -61,14 +61,14 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="901.60000000000002" y="-626.53673163418296"/>
+            <point key="canvasLocation" x="901.44927536231887" y="-626.9021739130435"/>
         </scene>
         <!--Session Table View Controller-->
         <scene sceneID="OUf-CZ-7Ph">
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="IGs-Xj-SQU" customClass="SessionTableViewController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sco-MF-tXK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -131,7 +131,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3l-KP-OaF">
@@ -416,7 +416,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oBg-iR-PdU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8pj-LG-WkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miw-1q-PRq">
@@ -554,7 +554,7 @@
             <objects>
                 <viewController storyboardIdentifier="SessionViewController" id="cPW-OD-tmg" customClass="SessionView" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ct-bD-EYu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rv5-vD-mvj">
@@ -653,6 +653,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Uxc-CY-M5t"/>
         <segue reference="uBS-nb-kiA"/>
-        <segue reference="MIx-q2-dBj"/>
+        <segue reference="IaV-4p-UlA"/>
     </inferredMetricsTieBreakers>
 </document>
