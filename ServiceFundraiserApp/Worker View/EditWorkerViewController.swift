@@ -8,8 +8,8 @@
 
 import UIKit
 
-class EditWorkerViewController: UIViewController {
-    
+class EditWorkerViewController: UIViewController
+{    
     var workers: [Worker]!
     var worker: Worker!
     var sessionIndex: Int!
@@ -19,19 +19,40 @@ class EditWorkerViewController: UIViewController {
     @IBOutlet var newNameInput: UITextField!
     @IBOutlet var newHoursInput: UITextField!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         session = Singleton.sharedInstance.sessions[sessionIndex]
         
         newNameInput.text = worker.name
-        newHoursInput.text = String(worker.hours.clean)
+        
+        if worker.hours != 0
+        {
+            newHoursInput.text = String(worker.hours.clean)
+        }
     }
     
     func updateWorker()
     {
-        worker.hours = (newHoursInput.text! as NSString).floatValue
-        worker.name = newNameInput.text!
+        if newHoursInput.text != ""
+        {
+            worker.hours = (newHoursInput.text! as NSString).floatValue
+        }
+        else
+        {
+            worker.hours = 0
+        }
+        
+        if newNameInput.text != ""
+        {
+            worker.name = newNameInput.text!
+        }
+        else
+        {
+            worker.name = "No Name"
+        }
+        
         workers[workerIndex] = worker
         session.updateSessionHours()
         session.updateWorkersPay()
