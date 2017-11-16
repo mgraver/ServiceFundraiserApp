@@ -60,7 +60,8 @@ class Session: NSObject, NSCoding
     
     func updateWorkersPay()
     {
-        let payPerHour: Float = Float(totalIncome / totalHours)
+        let payPerHour: Float
+        totalHours == 0 || totalIncome == 0 ? (payPerHour = 0) : (payPerHour = Float(totalIncome / totalHours))
         
         for worker in participantsArray
         {
