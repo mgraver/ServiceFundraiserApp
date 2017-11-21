@@ -136,29 +136,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3l-KP-OaF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3l-KP-OaF">
                                 <rect key="frame" x="94.5" y="167" width="186" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L3l-KP-OaF" secondAttribute="height" multiplier="31:8" id="Q7G-hk-3zf"/>
+                                    <constraint firstAttribute="width" constant="186" id="T35-5z-7mi"/>
+                                    <constraint firstAttribute="height" constant="48" id="sVj-cx-t97"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="New Fundraiser"/>
                                 <connections>
                                     <segue destination="qW5-2x-NsQ" kind="show" id="mOf-2o-EZN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7Y-CN-52u">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7Y-CN-52u">
                                 <rect key="frame" x="94.5" y="264" width="186" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.8507254464285714" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R7Y-CN-52u" secondAttribute="height" multiplier="31:8" id="Ehz-aw-5eT"/>
+                                    <constraint firstAttribute="width" constant="186" id="Ozr-qB-6HI"/>
+                                    <constraint firstAttribute="height" constant="48" id="wYg-vv-ihe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Records"/>
                                 <connections>
                                     <segue destination="VAT-HN-98H" kind="show" id="meU-hb-yRG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-Ea-Bm6">
-                                <rect key="frame" x="63" y="67" width="249" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-Ea-Bm6">
+                                <rect key="frame" x="71" y="76" width="233.5" height="34"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Mobile Fundraiser">
                                         <attributes>
@@ -172,6 +179,16 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="R7Y-CN-52u" secondAttribute="trailing" constant="78.5" id="0od-VZ-nCk"/>
+                            <constraint firstItem="4Df-Ea-Bm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6K0-oy-71I"/>
+                            <constraint firstItem="R7Y-CN-52u" firstAttribute="top" secondItem="L3l-KP-OaF" secondAttribute="bottom" constant="49" id="8jd-7S-3Ge"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L3l-KP-OaF" secondAttribute="trailing" constant="78.5" id="DyR-0c-60x"/>
+                            <constraint firstItem="4Df-Ea-Bm6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="Eeh-d9-Fne"/>
+                            <constraint firstItem="L3l-KP-OaF" firstAttribute="top" secondItem="4Df-Ea-Bm6" secondAttribute="bottom" constant="57" id="N1d-AT-eFz"/>
+                            <constraint firstItem="L3l-KP-OaF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78.5" id="R51-gH-dns"/>
+                            <constraint firstItem="R7Y-CN-52u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78.5" id="baJ-83-zUL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
