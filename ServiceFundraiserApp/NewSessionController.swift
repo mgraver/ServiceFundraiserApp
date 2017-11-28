@@ -23,6 +23,8 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
         descrTextView.delegate = self
         titleTextField.textColor = UIColor.darkGray
         descrTextView.textColor = UIColor.darkGray
+        descrTextView.layer.borderWidth = 2
+        descrTextView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     
