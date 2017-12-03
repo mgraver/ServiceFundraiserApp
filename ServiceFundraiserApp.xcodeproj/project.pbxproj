@@ -19,6 +19,9 @@
 		4C3116061F9905C800E025F9 /* IncomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3116051F9905C800E025F9 /* IncomeController.swift */; };
 		4C5EC8F31F96A01400343196 /* NewSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F21F96A01400343196 /* NewSessionController.swift */; };
 		4C5EC8F71F96A12300343196 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5EC8F61F96A12300343196 /* SessionViewController.swift */; };
+		4CC302851FD3923A00E5AFFF /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC302821FD3923A00E5AFFF /* SlideInPresentationController.swift */; };
+		4CC302861FD3923A00E5AFFF /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC302831FD3923A00E5AFFF /* SlideInPresentationAnimator.swift */; };
+		4CC302871FD3923A00E5AFFF /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC302841FD3923A00E5AFFF /* SlideInPresentationManager.swift */; };
 		4CE4411E1F8E985E00D640F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4411D1F8E985E00D640F8 /* AppDelegate.swift */; };
 		4CE441201F8E985E00D640F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4411F1F8E985E00D640F8 /* ViewController.swift */; };
 		4CE441231F8E985F00D640F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE441211F8E985F00D640F8 /* Main.storyboard */; };
@@ -39,6 +42,9 @@
 		4C3116051F9905C800E025F9 /* IncomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeController.swift; sourceTree = "<group>"; };
 		4C5EC8F21F96A01400343196 /* NewSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionController.swift; sourceTree = "<group>"; };
 		4C5EC8F61F96A12300343196 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		4CC302821FD3923A00E5AFFF /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationController.swift; path = "../../../MedalCount Starter/MedalCount/SlideInPresentationController.swift"; sourceTree = "<group>"; };
+		4CC302831FD3923A00E5AFFF /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationAnimator.swift; path = "../../../MedalCount Starter/MedalCount/SlideInPresentationAnimator.swift"; sourceTree = "<group>"; };
+		4CC302841FD3923A00E5AFFF /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInPresentationManager.swift; path = "../../../MedalCount Starter/MedalCount/SlideInPresentationManager.swift"; sourceTree = "<group>"; };
 		4CDBF2311F9FDA6F000D6EEA /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		4CE4411A1F8E985E00D640F8 /* ServiceFundraiserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceFundraiserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE4411D1F8E985E00D640F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		4CC302811FD3920D00E5AFFF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4CC302831FD3923A00E5AFFF /* SlideInPresentationAnimator.swift */,
+				4CC302821FD3923A00E5AFFF /* SlideInPresentationController.swift */,
+				4CC302841FD3923A00E5AFFF /* SlideInPresentationManager.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		4CE441111F8E985E00D640F8 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +142,7 @@
 				4C3116051F9905C800E025F9 /* IncomeController.swift */,
 				4CE441211F8E985F00D640F8 /* Main.storyboard */,
 				4CE441261F8E985F00D640F8 /* LaunchScreen.storyboard */,
+				4CC302811FD3920D00E5AFFF /* Presentation */,
 				36D3A1161FA8E57C005DE2FB /* Classes */,
 				36D3A1151FA8E55E005DE2FB /* Worker View */,
 				36465E291FA3DB5500E508A1 /* List of Sessions */,
@@ -208,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				366481641F9FCD040095D6C0 /* Session.swift in Sources */,
+				4CC302861FD3923A00E5AFFF /* SlideInPresentationAnimator.swift in Sources */,
 				367DF1BD1FAAD48C00435BA2 /* Singleton.swift in Sources */,
 				36D10CE11FA1167700FB22ED /* Worker.swift in Sources */,
 				36465E2F1FA3DD4400E508A1 /* SessionTableViewController.swift in Sources */,
@@ -218,8 +236,10 @@
 				4C3116061F9905C800E025F9 /* IncomeController.swift in Sources */,
 				36465E331FA3E2BE00E508A1 /* SessionTableViewCell.swift in Sources */,
 				4CE4411E1F8E985E00D640F8 /* AppDelegate.swift in Sources */,
+				4CC302871FD3923A00E5AFFF /* SlideInPresentationManager.swift in Sources */,
 				4C5EC8F71F96A12300343196 /* SessionViewController.swift in Sources */,
 				36B2218E1FA7D22D004AF8CF /* WorkerViewController.swift in Sources */,
+				4CC302851FD3923A00E5AFFF /* SlideInPresentationController.swift in Sources */,
 				4CE441301F8E98A600D640F8 /* TimeStamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
