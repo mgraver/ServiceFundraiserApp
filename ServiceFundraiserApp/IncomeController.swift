@@ -30,7 +30,23 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     
     
     @IBAction func doneClick(_ sender: UIButton) {
-        performSegue(withIdentifier: "incomeToSV", sender: self);
+        if let sessionView = presentingViewController as? SessionView {
+            
+            if validateIncomeInput(){
+                let income = inputToFloat(input: incomeTextField.text!)
+                if OptionPicker.selectedRow(inComponent: 0) == 0 {
+                    editSession?.totalIncome += income
+                }
+                else
+                {
+                    editSession?.totalIncome -= income
+                }
+                editSession?.updateWorkersPay()
+            }
+            sessionView.currentSession = editSession;
+            sessionView.incomeButton.setTitle(String(format: "$%.2f", editSession!.totalIncome), for: .normal)
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -88,24 +104,4 @@ class IncomeController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         }
         print(validateIncomeInput())
     }
-    
-    //MARK: prepare for segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let sessionView = segue.destination as? SessionView {
-            
-            if validateIncomeInput(){
-                let income = inputToFloat(input: incomeTextField.text!)
-                if OptionPicker.selectedRow(inComponent: 0) == 0 {
-                    editSession?.totalIncome += income
-                }
-                else
-                {
-                    editSession?.totalIncome -= income
-                }
-                editSession?.updateWorkersPay()
-            }
-            sessionView.currentSession = editSession;
-        }
-    }
-    
 }

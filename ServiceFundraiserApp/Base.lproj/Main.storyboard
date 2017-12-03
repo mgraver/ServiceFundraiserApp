@@ -496,7 +496,6 @@
                     <connections>
                         <outlet property="OptionPicker" destination="zIH-46-155" id="v1d-Vg-EsX"/>
                         <outlet property="incomeTextField" destination="S30-7B-SN3" id="sgy-6u-zi8"/>
-                        <segue destination="cPW-OD-tmg" kind="show" identifier="incomeToSV" id="s0L-ce-Kcg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -771,7 +770,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s0L-ce-Kcg"/>
+        <segue reference="pho-S6-xAb"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="rfC-H1-sKZ"/>
         <segue reference="BjV-Bz-Ndt"/>
