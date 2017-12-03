@@ -69,7 +69,6 @@ class SessionTableViewController: UITableViewController {
             let destination = segue.destination as! SessionView
             let indexPath = self.tableView.indexPathForSelectedRow!
             destination.currentSession = searchedSessions[indexPath.row]
-            destination.recordDestination = true
         }
     }
     

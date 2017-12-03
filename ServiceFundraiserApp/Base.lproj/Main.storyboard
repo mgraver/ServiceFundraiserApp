@@ -549,7 +549,7 @@
                                     <constraint firstAttribute="width" secondItem="5Ne-t0-H15" secondAttribute="height" multiplier="2:1" id="abm-7v-lfv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="&lt; Home"/>
+                                <state key="normal" title=" &lt; Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="NStoHomeView" id="71x-Qh-bbj"/>
                                 </connections>
@@ -633,9 +633,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Rv5-vD-mvj" secondAttribute="height" multiplier="2:1" id="RIK-hX-aby"/>
                                 </constraints>
-                                <state key="normal" title="&lt; Back"/>
+                                <state key="normal" title="&lt; Home"/>
                                 <connections>
-                                    <action selector="onBackClick:" destination="cPW-OD-tmg" eventType="touchDown" id="zFd-14-qAe"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="MIx-q2-dBj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Title: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-GX-jt6">
@@ -761,8 +761,6 @@
                         <outlet property="partipantsLabel" destination="fyh-57-06t" id="3tt-TS-Cf3"/>
                         <outlet property="titleLable" destination="Mkk-GX-jt6" id="AYW-p1-R9z"/>
                         <segue destination="g0X-wh-aQv" kind="show" identifier="SVtoIncomeEdit" id="IrY-xE-Ze3"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="SVtoVC" id="rfC-H1-sKZ"/>
-                        <segue destination="VAT-HN-98H" kind="show" identifier="SVtoRV" id="BjV-Bz-Ndt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJO-x7-Rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -773,7 +771,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="phd-jX-37n"/>
         <segue reference="KDX-L8-WHK"/>
-        <segue reference="rfC-H1-sKZ"/>
-        <segue reference="BjV-Bz-Ndt"/>
+        <segue reference="71x-Qh-bbj"/>
     </inferredMetricsTieBreakers>
 </document>
