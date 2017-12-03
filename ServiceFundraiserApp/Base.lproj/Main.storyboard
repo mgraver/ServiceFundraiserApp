@@ -438,16 +438,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIe-7P-m2l">
-                                <rect key="frame" x="308" y="20" width="51" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jIe-7P-m2l" secondAttribute="height" multiplier="17:10" id="yx4-sZ-t6B"/>
-                                </constraints>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="doneClick:" destination="g0X-wh-aQv" eventType="touchDown" id="Ch0-lE-m2D"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e.g  2000.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S30-7B-SN3">
                                 <rect key="frame" x="164" y="68" width="119" height="30"/>
                                 <constraints>
@@ -478,6 +468,16 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="113" id="nU0-4f-gsE"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIe-7P-m2l">
+                                <rect key="frame" x="308" y="28" width="51" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jIe-7P-m2l" secondAttribute="height" multiplier="17:10" id="yx4-sZ-t6B"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneClick:" destination="g0X-wh-aQv" eventType="touchDown" id="Ch0-lE-m2D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -485,7 +485,7 @@
                             <constraint firstItem="S30-7B-SN3" firstAttribute="top" secondItem="t4H-KQ-bdf" secondAttribute="bottom" constant="48" id="C3H-XX-A6f"/>
                             <constraint firstItem="zIH-46-155" firstAttribute="leading" secondItem="8pj-LG-WkH" secondAttribute="leadingMargin" constant="22" id="GBI-cl-fkL"/>
                             <constraint firstItem="miw-1q-PRq" firstAttribute="leading" secondItem="8pj-LG-WkH" secondAttribute="leadingMargin" constant="26" id="JqU-qw-qKc"/>
-                            <constraint firstItem="jIe-7P-m2l" firstAttribute="top" secondItem="t4H-KQ-bdf" secondAttribute="bottom" id="TfI-iq-sF7"/>
+                            <constraint firstItem="jIe-7P-m2l" firstAttribute="top" secondItem="t4H-KQ-bdf" secondAttribute="bottom" constant="8" id="TfI-iq-sF7"/>
                             <constraint firstItem="miw-1q-PRq" firstAttribute="top" secondItem="t4H-KQ-bdf" secondAttribute="bottom" constant="48" id="WNm-7u-LCg"/>
                             <constraint firstItem="zIH-46-155" firstAttribute="top" secondItem="8pj-LG-WkH" secondAttribute="topMargin" constant="105" id="YXc-30-5Ec"/>
                             <constraint firstItem="jIe-7P-m2l" firstAttribute="trailing" secondItem="8pj-LG-WkH" secondAttribute="trailingMargin" id="Yvc-sr-qKr"/>
@@ -771,7 +771,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="phd-jX-37n"/>
+        <segue reference="s0L-ce-Kcg"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="rfC-H1-sKZ"/>
         <segue reference="BjV-Bz-Ndt"/>
