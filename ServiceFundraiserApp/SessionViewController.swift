@@ -13,8 +13,7 @@ class SessionView: UIViewController{
     var sessions:[Session]?
     var currentSession:Session!
     var currentSessionIndex:Int?
-    var recordDestination:Bool = false
-    
+
     //MARK:labelPrefixes
     let titlePre = "Session Title: "
     let descPre = "Description: "
@@ -48,20 +47,10 @@ class SessionView: UIViewController{
     }
     
     
-    //MARK: -Income Button
+    //MARK: -Income Buttom
     @IBAction func onIncomeClick(_ sender: UIButton) {
         performSegue(withIdentifier: "SVtoIncomeEdit", sender: self)
     }
-    
-    //MARK: -BACK Button
-    @IBAction func onBackClick(_ sender: UIButton) {
-        if recordDestination {
-            performSegue(withIdentifier: "SVtoRV", sender: self)
-        } else {
-            performSegue(withIdentifier: "SVtoVC", sender: self)
-        }
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SVtoIncomeEdit" {
