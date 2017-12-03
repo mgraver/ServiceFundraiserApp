@@ -13,6 +13,7 @@ class SessionView: UIViewController{
     var sessions:[Session]?
     var currentSession:Session!
     var currentSessionIndex:Int?
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     var recordDestination:Bool = false
     
     //MARK:labelPrefixes
@@ -67,6 +68,9 @@ class SessionView: UIViewController{
         if segue.identifier == "SVtoIncomeEdit" {
             if let incomeController = segue.destination as? IncomeController{
                 incomeController.editSession = currentSession
+                slideInTransitioningDelegate.direction = .bottom
+                incomeController.transitioningDelegate = slideInTransitioningDelegate
+                incomeController.modalPresentationStyle = .custom
             }
         }
             
@@ -78,6 +82,7 @@ class SessionView: UIViewController{
                 workerController.sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
             }
         }
+        
     }
     
     //MARK: save data
