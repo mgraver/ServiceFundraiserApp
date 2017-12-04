@@ -26,63 +26,58 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
 
     var session: Session!
     var workers: [Worker]!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var hoursLabel: UILabel!
-    @IBOutlet var incomeContributedLabel: UILabel!
-    @IBOutlet var EditButton: UIButton!
     @IBOutlet var addWorkerNameInput: UITextField!
     @IBOutlet var workerTable: UITableView!
     var sessionIndex: Int!
     var workerIndex: Int!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         workerTable.delegate = self
         workerTable.dataSource = self
         addWorkerNameInput.delegate = self
+        workerTable.allowsSelection = false
 
         workers = session.participantsArray
-        
-        if workers.count != 0 && workerIndex == nil
-        {
-            initializeInfo(worker: workers[0])  // Initially displays worker at top of workers list
-            workerIndex = 0
-        }
-        else if workers.count != 0
-        {
-            initializeInfo(worker: workers[workerIndex])
-        }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return workers.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "wCell", for: indexPath)
-        cell.textLabel!.font = UIFont.systemFont(ofSize: 23.0)
-        cell.textLabel!.adjustsFontSizeToFitWidth = true
-        cell.textLabel!.numberOfLines = 1
-        cell.textLabel!.textAlignment = .center
-        cell.textLabel!.text = workers[indexPath.row].name
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "wCell", for: indexPath) as! WorkerTableViewCell
+        cell.nameLabel.text = workers[indexPath.row].name
+        cell.hoursWorkedLabel.text = "Hours Worked: " + workers[indexPath.row].hours.clean
+        cell.incomeContributedLabel.text = "Income Contributed: $" + workers[indexPath.row].income.money
+        cell.editButton.tag = indexPath.item
+        
+        cell.editButton.addTarget(self, action: #selector(setWorkerIndex), for: .touchDown)
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        workerIndex = indexPath.row
-        initializeInfo(worker: workers[workerIndex])
+    @objc func setWorkerIndex(sender: UIButton)
+    {
+        workerIndex = sender.tag
     }
     
-    // Shows the info of the selected worker - or the only worker if only one exists
-    func initializeInfo(worker: Worker)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        nameLabel.text = (worker.name)
-        hoursLabel.text = String(describing: worker.hours.clean) + " hours"
-        incomeContributedLabel.text = "$" + String(describing: worker.income.money)
+        return 123
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 123
     }
     
     @IBAction func addWorker()
@@ -107,27 +102,15 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
                 session.participantsArray = workers
                 session.totalParticipants = workers.count
                 workerTable.reloadData()
-                
-                if (workers.count == 1)
-                {
-                    initializeInfo(worker: workers[0])
-                    workerIndex = 0
-                }
-                else
-                {
-                    let newIndex = workers.index(of: newWorker)
-                    initializeInfo(worker: workers[newIndex!])
-                    workerIndex = newIndex
-                }
             }
             
             addWorkerNameInput.text = ""
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
         addWorker()
-        
         return true
     }
     

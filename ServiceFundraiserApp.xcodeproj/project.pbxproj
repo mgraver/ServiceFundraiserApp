@@ -13,6 +13,7 @@
 		366481641F9FCD040095D6C0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366481631F9FCD040095D6C0 /* Session.swift */; };
 		367DF1BD1FAAD48C00435BA2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DF1BC1FAAD48C00435BA2 /* Singleton.swift */; };
 		36B2218E1FA7D22D004AF8CF /* WorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */; };
+		36B9D3941FD603D200B8A26E /* WorkerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9D3931FD603D200B8A26E /* WorkerTableViewCell.swift */; };
 		36D10CE11FA1167700FB22ED /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D10CDF1FA1167700FB22ED /* Worker.swift */; };
 		36D10CE21FA1167700FB22ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D10CE01FA1167700FB22ED /* Assets.xcassets */; };
 		36D3A1141FA8E554005DE2FB /* EditWorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3A1131FA8E554005DE2FB /* EditWorkerViewController.swift */; };
@@ -33,6 +34,7 @@
 		366481631F9FCD040095D6C0 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		367DF1BC1FAAD48C00435BA2 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerViewController.swift; sourceTree = "<group>"; };
+		36B9D3931FD603D200B8A26E /* WorkerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerTableViewCell.swift; sourceTree = "<group>"; };
 		36D10CDF1FA1167700FB22ED /* Worker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		36D10CE01FA1167700FB22ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36D3A1131FA8E554005DE2FB /* EditWorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkerViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				36B2218D1FA7D22D004AF8CF /* WorkerViewController.swift */,
 				36D3A1131FA8E554005DE2FB /* EditWorkerViewController.swift */,
+				36B9D3931FD603D200B8A26E /* WorkerTableViewCell.swift */,
 			);
 			path = "Worker View";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				4C5EC8F31F96A01400343196 /* NewSessionController.swift in Sources */,
 				36465E281FA3DB4F00E508A1 /* ListOfSessionsViewController.swift in Sources */,
 				4C3116061F9905C800E025F9 /* IncomeController.swift in Sources */,
+				36B9D3941FD603D200B8A26E /* WorkerTableViewCell.swift in Sources */,
 				36465E331FA3E2BE00E508A1 /* SessionTableViewCell.swift in Sources */,
 				4CE4411E1F8E985E00D640F8 /* AppDelegate.swift in Sources */,
 				4C5EC8F71F96A12300343196 /* SessionViewController.swift in Sources */,
