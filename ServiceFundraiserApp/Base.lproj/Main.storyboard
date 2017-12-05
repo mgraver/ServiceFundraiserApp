@@ -702,14 +702,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sk-MI-xyW">
+                                <rect key="frame" x="88" y="486" width="162" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Sk-MI-xyW" secondAttribute="height" multiplier="81:20" id="QI4-En-aOV"/>
+                                    <constraint firstAttribute="height" constant="40" id="u24-3B-xD8"/>
+                                    <constraint firstAttribute="width" constant="162" id="wrw-Fz-nye"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="DELETE RECORD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3Sk-MI-xyW" firstAttribute="leading" secondItem="DJK-JU-DmL" secondAttribute="leading" constant="88" id="05w-Sx-web"/>
                             <constraint firstItem="Rv5-vD-mvj" firstAttribute="top" secondItem="9Ct-bD-EYu" secondAttribute="top" constant="20" id="3M0-as-0TO"/>
                             <constraint firstItem="fyh-57-06t" firstAttribute="top" secondItem="vcP-NP-1Mw" secondAttribute="bottom" constant="29" id="5CK-RQ-d2s"/>
                             <constraint firstItem="zbD-6h-fZT" firstAttribute="leading" secondItem="Nbr-CM-RjB" secondAttribute="trailing" constant="1" id="6Ux-o9-vJp"/>
                             <constraint firstItem="Rv5-vD-mvj" firstAttribute="leading" secondItem="DJK-JU-DmL" secondAttribute="leading" constant="16" id="9UW-u9-OQk"/>
                             <constraint firstItem="ixt-gJ-6Hr" firstAttribute="centerX" secondItem="9Ct-bD-EYu" secondAttribute="centerX" id="F7I-Pu-ufr"/>
+                            <constraint firstItem="3Sk-MI-xyW" firstAttribute="top" secondItem="fyh-57-06t" secondAttribute="bottom" constant="30" id="IUQ-f7-5Oo"/>
                             <constraint firstItem="jw2-Pg-nEK" firstAttribute="top" secondItem="9Ct-bD-EYu" secondAttribute="top" constant="20" id="JK6-rB-TJl"/>
                             <constraint firstItem="Nbr-CM-RjB" firstAttribute="leading" secondItem="DJK-JU-DmL" secondAttribute="leading" constant="23" id="M58-wo-tgV"/>
                             <constraint firstItem="vcP-NP-1Mw" firstAttribute="leading" secondItem="DJK-JU-DmL" secondAttribute="leading" constant="23" id="Qi2-gF-Fds"/>
@@ -744,8 +759,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Em-bp-VbI"/>
-        <segue reference="pho-S6-xAb"/>
+        <segue reference="phd-jX-37n"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="rfC-H1-sKZ"/>
         <segue reference="BjV-Bz-Ndt"/>
