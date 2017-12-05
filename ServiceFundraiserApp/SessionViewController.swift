@@ -63,6 +63,11 @@ class SessionView: UIViewController{
         }
     }
     
+    @IBAction func deleteRecord(_ sender: UIButton) {
+        let sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
+        Singleton.sharedInstance.sessions.remove(at: sessionIndex!)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SVtoIncomeEdit" {

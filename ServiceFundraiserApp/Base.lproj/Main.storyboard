@@ -714,6 +714,10 @@
                                 <state key="normal" title="DELETE RECORD">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteRecord:" destination="cPW-OD-tmg" eventType="touchDown" id="sEk-bD-ylR"/>
+                                    <segue destination="VAT-HN-98H" kind="show" id="7j9-ig-sSa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -762,6 +766,6 @@
         <segue reference="phd-jX-37n"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="rfC-H1-sKZ"/>
-        <segue reference="BjV-Bz-Ndt"/>
+        <segue reference="7j9-ig-sSa"/>
     </inferredMetricsTieBreakers>
 </document>
