@@ -10,6 +10,9 @@ import UIKit
 import os.log
 class ViewController: UIViewController
 {
+    //Properties
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -38,6 +41,21 @@ class ViewController: UIViewController
         
     }
     
-
+    //MARK -Help Button
+    @IBAction func helpClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "VCtoH", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "VCtoH" {
+            if let helpView = segue.destination as? SVHelpController{
+               slideInTransitioningDelegate.direction = .right
+               helpView.transitioningDelegate = slideInTransitioningDelegate
+               helpView.modalPresentationStyle = .custom
+            }
+        }
+    }
+    
+    
 }
 

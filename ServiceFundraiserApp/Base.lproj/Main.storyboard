@@ -181,6 +181,9 @@
                                 <rect key="frame" x="321" y="609" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="QButton.png"/>
+                                <connections>
+                                    <action selector="helpClick:" destination="BYZ-38-t0r" eventType="touchDown" id="Naz-5x-u0h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,10 +198,13 @@
                             <constraint firstItem="R7Y-CN-52u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78.5" id="baJ-83-zUL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="tgL-eU-EwX" kind="show" identifier="VCtoH" id="5kc-uW-ter"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="62" y="89"/>
         </scene>
         <!--Worker View Controller-->
         <scene sceneID="GYD-tK-uSB">
@@ -479,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYy-73-IP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="908.9955022488756"/>
+            <point key="canvasLocation" x="1692" y="854"/>
         </scene>
         <!--New Session Controller-->
         <scene sceneID="ghG-3n-xl7">
@@ -596,7 +602,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgd-gT-4bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.79999999999995" y="116.49175412293854"/>
+            <point key="canvasLocation" x="900" y="89"/>
+        </scene>
+        <!--Help Controller-->
+        <scene sceneID="5Py-KN-POY">
+            <objects>
+                <viewController storyboardIdentifier="SVHelpView" id="tgL-eU-EwX" customClass="SVHelpController" customModule="ServiceFundraiserApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dOA-de-l8f"/>
+                        <viewControllerLayoutGuide type="bottom" id="I55-QX-Byc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sWk-Yw-yvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-DK-9Ju">
+                                <rect key="frame" x="152" y="28" width="70" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Fundraiser: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFD-Uo-Hml">
+                                <rect key="frame" x="47" y="95" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="The New Fundraiser button will take you to a menu where you can create a new fundraiser that will be stored in your records." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Fo-eUT">
+                                <rect key="frame" x="47" y="124" width="247" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-uG-BKq">
+                                <rect key="frame" x="47" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The Records button will take you a list of all your previous fundraisers. From there you can select a fundraiser to make edits too.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Records: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJB-k0-Emz">
+                                <rect key="frame" x="47" y="240" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="HelpLabel" destination="Tez-DK-9Ju" id="K9v-gw-MMo"/>
+                        <outlet property="NFHelpText" destination="ec8-Fo-eUT" id="kZV-3J-grJ"/>
+                        <outlet property="NFraiserLabel" destination="LFD-Uo-Hml" id="ePn-QA-UTV"/>
+                        <outlet property="RecordsHelpText" destination="c3P-uG-BKq" id="jwD-8h-AXk"/>
+                        <outlet property="RecordsLAbel" destination="tJB-k0-Emz" id="JNc-Me-gTY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLY-gN-eUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="853"/>
         </scene>
         <!--Session View-->
         <scene sceneID="gDf-iu-ds5">
@@ -764,7 +833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJO-x7-Rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="115.59220389805098"/>
+            <point key="canvasLocation" x="966" y="854"/>
         </scene>
     </scenes>
     <resources>
