@@ -177,6 +177,11 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-yh-95G">
+                                <rect key="frame" x="321" y="609" width="38" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="QButton.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -762,10 +767,13 @@
             <point key="canvasLocation" x="1768.8" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="QButton.png" width="1280" height="1280"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="phd-jX-37n"/>
         <segue reference="KDX-L8-WHK"/>
         <segue reference="rfC-H1-sKZ"/>
-        <segue reference="7j9-ig-sSa"/>
+        <segue reference="meU-hb-yRG"/>
     </inferredMetricsTieBreakers>
 </document>
