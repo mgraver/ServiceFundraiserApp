@@ -30,6 +30,7 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet var workerTable: UITableView!
     var sessionIndex: Int!
     var workerIndex: Int!
+    var recordDestination:Bool = false
     
     override func viewDidLoad()
     {
@@ -135,6 +136,7 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
         {
             if let sessionController = segue.destination as? SessionView {
                 sessionController.currentSession = session
+                sessionController.recordDestination = self.recordDestination
             }
         }
         
@@ -147,6 +149,7 @@ class WorkerViewController: UIViewController, UITableViewDataSource, UITableView
                 editWorkerViewController.workerIndex = workerIndex
                 editWorkerViewController.sessionIndex = sessionIndex
                 editWorkerViewController.session = session
+                editWorkerViewController.recordDestination = self.recordDestination
             }
         }
     }

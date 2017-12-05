@@ -80,6 +80,7 @@ class SessionView: UIViewController{
             {
                 workerController.session = currentSession
                 workerController.sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
+                workerController.recordDestination = self.recordDestination
             }
         }
         

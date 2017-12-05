@@ -15,6 +15,7 @@ class EditWorkerViewController: UIViewController
     var sessionIndex: Int!
     var workerIndex: Int!
     var session: Session!
+    var recordDestination:Bool = false
     
     @IBOutlet var newNameInput: UITextField!
     @IBOutlet var newHoursInput: UITextField!
@@ -77,6 +78,7 @@ class EditWorkerViewController: UIViewController
                 workerView.workers = workers
                 workerView.sessionIndex = sessionIndex
                 workerView.workerIndex = workerIndex
+                workerView.recordDestination = self.recordDestination
             }
         }
         
@@ -89,7 +91,7 @@ class EditWorkerViewController: UIViewController
                 workerView.session = session
                 workerView.workers = workers
                 workerView.sessionIndex = sessionIndex
-                
+                workerView.recordDestination = self.recordDestination
                 Singleton.sharedInstance.sessions[sessionIndex] = session
             }
         }
@@ -105,7 +107,7 @@ class EditWorkerViewController: UIViewController
                 workerView.workers = workers
                 workerView.sessionIndex = sessionIndex
                 workerView.workerIndex = workerIndex
-                
+                workerView.recordDestination = self.recordDestination
                 Singleton.sharedInstance.sessions[sessionIndex] = session
             }
         }
