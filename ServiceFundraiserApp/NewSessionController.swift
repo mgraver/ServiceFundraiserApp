@@ -95,6 +95,11 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
         }
     }
     
+    @IBAction func onHelpClick(_ sender: UIButton) {
+        
+    }
+    
+    
     //Send data to the Income controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newSession = buildSession()
