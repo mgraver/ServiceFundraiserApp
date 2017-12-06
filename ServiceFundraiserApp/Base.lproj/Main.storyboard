@@ -178,10 +178,10 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-yh-95G">
-                                <rect key="frame" x="321" y="609" width="38" height="38"/>
+                                <rect key="frame" x="324" y="612" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="4AC-0l-nV0"/>
-                                    <constraint firstAttribute="width" constant="38" id="iYB-aG-H6R"/>
+                                    <constraint firstAttribute="height" constant="35" id="4AC-0l-nV0"/>
+                                    <constraint firstAttribute="width" constant="35" id="iYB-aG-H6R"/>
                                     <constraint firstAttribute="width" secondItem="IuD-yh-95G" secondAttribute="height" multiplier="1:1" id="kim-dr-d8x"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="QButton.png"/>
@@ -595,15 +595,15 @@
                                 <rect key="frame" x="28" y="125" width="210" height="116.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">The title will serve as the main idenifier for you fundraiser.  The title is what will be used to help you to find the fundraiser later in records.  You must fill the field out before continuing</string>
+                                <string key="text">Click on the highlited total income to bring up an income prompt. From there you can add or subtract from the fundriaser total income as the fundraiser earns money.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Sg-sv-DJd">
-                                <rect key="frame" x="30" y="295" width="207" height="110"/>
+                                <rect key="frame" x="30" y="295" width="207" height="116.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">The descriptions is there to help you keep notes or further identify the fundraiser after the title.  It is not a required field.</string>
+                                <string key="text">Clicking on participants will bring you to a roster that will keep track of who came to the fundraiser, how long they came for, and how much they earned by helping.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -615,10 +615,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vg9-00-6VM">
-                                <rect key="frame" x="30" y="459" width="207" height="116.5"/>
+                                <rect key="frame" x="31" y="459" width="205.5" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">The create button will take the information provided and make a new fundraiser from it.  It will then take you to a new menu where you can add more information.</string>
+                                <string key="text">The delete button is used for those records you no longer need. Simply press the delete button and that record will be removed from the app.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -952,9 +952,13 @@
                                     <segue destination="VAT-HN-98H" kind="show" id="7j9-ig-sSa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUR-lV-dfh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUR-lV-dfh">
                                 <rect key="frame" x="317" y="612" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="82u-35-TN9"/>
+                                    <constraint firstAttribute="height" constant="35" id="Ti8-jk-vci"/>
+                                    <constraint firstAttribute="width" secondItem="yUR-lV-dfh" secondAttribute="height" multiplier="1:1" id="wVL-nw-xl6"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="QButton.png"/>
                                 <connections>
                                     <action selector="onHelpClick:" destination="qW5-2x-NsQ" eventType="touchDown" id="fjz-WS-Kmn"/>
@@ -980,7 +984,9 @@
                             <constraint firstItem="GRo-qj-U0h" firstAttribute="top" secondItem="Mkk-GX-jt6" secondAttribute="bottom" constant="30" id="fOj-PW-TdL"/>
                             <constraint firstItem="ixt-gJ-6Hr" firstAttribute="top" secondItem="9Ct-bD-EYu" secondAttribute="topMargin" constant="57" id="hbo-h4-Gha"/>
                             <constraint firstItem="vcP-NP-1Mw" firstAttribute="top" secondItem="Nbr-CM-RjB" secondAttribute="bottom" constant="29" id="i3U-kZ-6Xm"/>
+                            <constraint firstItem="DJK-JU-DmL" firstAttribute="trailing" secondItem="yUR-lV-dfh" secondAttribute="trailing" constant="23" id="i7A-Bo-4uY"/>
                             <constraint firstItem="Mkk-GX-jt6" firstAttribute="top" secondItem="ixt-gJ-6Hr" secondAttribute="bottom" constant="38" id="iJG-Qm-9vr"/>
+                            <constraint firstItem="yUR-lV-dfh" firstAttribute="top" secondItem="GRo-qj-U0h" secondAttribute="bottom" constant="355" id="juC-yL-Qy7"/>
                             <constraint firstItem="zbD-6h-fZT" firstAttribute="leading" secondItem="Nbr-CM-RjB" secondAttribute="trailing" constant="1" id="nyH-2D-VqL"/>
                             <constraint firstItem="Mkk-GX-jt6" firstAttribute="leading" secondItem="DJK-JU-DmL" secondAttribute="leading" constant="23" id="t0t-DE-9ww"/>
                             <constraint firstItem="GRo-qj-U0h" firstAttribute="leading" secondItem="DJK-JU-DmL" secondAttribute="leading" constant="23" id="vhd-1d-b2U"/>
