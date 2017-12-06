@@ -13,6 +13,8 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     var sessions:[Session]?
     let titlePlaceHolder = "Enter Title Here"
     let descPlaceHolder = "Enter your description here."
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
+    
     //MARK:UIFields
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descrTextView: UITextView!
@@ -103,11 +105,18 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     //Send data to the Income controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newSession = buildSession()
-        if let sessionView = segue.destination as? SessionView{
-            if segue.identifier == "NStoSessionView"{
-                Singleton.sharedInstance.sessions.append(newSession)
-                Singleton.sharedInstance.sessions.sort(by: sessionSorter)
-                sessionView.currentSession = newSession
+        if segue.identifier == "NStoH" {
+            let helpView = segue.destination
+            slideInTransitioningDelegate.direction = .right
+            helpView.transitioningDelegate = slideInTransitioningDelegate
+            helpView.modalPresentationStyle = .custom
+        } else {
+            if let sessionView = segue.destination as? SessionView {
+                if segue.identifier == "NStoSessionView"{
+                    Singleton.sharedInstance.sessions.append(newSession)
+                    Singleton.sharedInstance.sessions.sort(by: sessionSorter)
+                    sessionView.currentSession = newSession
+                }
             }
         }
     }
