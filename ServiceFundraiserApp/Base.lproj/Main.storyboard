@@ -177,9 +177,13 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-yh-95G">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-yh-95G">
                                 <rect key="frame" x="321" y="609" width="38" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="4AC-0l-nV0"/>
+                                    <constraint firstAttribute="width" constant="38" id="iYB-aG-H6R"/>
+                                    <constraint firstAttribute="width" secondItem="IuD-yh-95G" secondAttribute="height" multiplier="1:1" id="kim-dr-d8x"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="QButton.png"/>
                                 <connections>
                                     <action selector="helpClick:" destination="BYZ-38-t0r" eventType="touchDown" id="Naz-5x-u0h"/>
@@ -190,11 +194,13 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="R7Y-CN-52u" secondAttribute="trailing" constant="78.5" id="0od-VZ-nCk"/>
                             <constraint firstItem="4Df-Ea-Bm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6K0-oy-71I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IuD-yh-95G" secondAttribute="bottom" constant="20" id="8WR-ZP-gKM"/>
                             <constraint firstItem="R7Y-CN-52u" firstAttribute="top" secondItem="L3l-KP-OaF" secondAttribute="bottom" constant="49" id="8jd-7S-3Ge"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L3l-KP-OaF" secondAttribute="trailing" constant="78.5" id="DyR-0c-60x"/>
                             <constraint firstItem="4Df-Ea-Bm6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="Eeh-d9-Fne"/>
                             <constraint firstItem="L3l-KP-OaF" firstAttribute="top" secondItem="4Df-Ea-Bm6" secondAttribute="bottom" constant="57" id="N1d-AT-eFz"/>
                             <constraint firstItem="L3l-KP-OaF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78.5" id="R51-gH-dns"/>
+                            <constraint firstItem="IuD-yh-95G" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ub0-kT-WPm"/>
                             <constraint firstItem="R7Y-CN-52u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78.5" id="baJ-83-zUL"/>
                         </constraints>
                     </view>
@@ -411,6 +417,78 @@
             </objects>
             <point key="canvasLocation" x="3597.5999999999999" y="114.69265367316342"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="W6y-fz-vQf">
+            <objects>
+                <viewController id="J72-CO-lh8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x7B-Ek-Zp6"/>
+                        <viewControllerLayoutGuide type="bottom" id="MMG-zt-sS8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fzz-Xu-NGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62Q-fM-I0W">
+                                <rect key="frame" x="101" y="28" width="70" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X9-1d-WRr">
+                                <rect key="frame" x="16" y="96" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XEB-jG-Uw2">
+                                <rect key="frame" x="28" y="125" width="210" height="116.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The title will serve as the main idenifier for you fundraiser.  The title is what will be used to help you to find the fundraiser later in records.  You must fill the field out before continuing</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3rI-2R-FAR">
+                                <rect key="frame" x="30" y="295" width="207" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The descriptions is there to help you keep notes or further identify the fundraiser after the title.  It is not a required field.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0el-5d-FKO">
+                                <rect key="frame" x="16" y="266" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7fZ-8d-51i">
+                                <rect key="frame" x="30" y="459" width="207" height="116.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The create button will take the information provided and make a new fundraiser from it.  It will then take you to a new menu where you can add more information.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgd-WS-qvw">
+                                <rect key="frame" x="16" y="430" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rQ-xf-nP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="853"/>
+        </scene>
         <!--Income Controller-->
         <scene sceneID="3x2-1h-QOK">
             <objects>
@@ -606,6 +684,7 @@
                         <outlet property="descrTextView" destination="xT4-GR-wew" id="fnf-Ba-bNm"/>
                         <outlet property="titleTextField" destination="CxA-qr-L7x" id="KWd-FO-h6B"/>
                         <segue destination="cPW-OD-tmg" kind="show" identifier="NStoSessionView" id="phd-jX-37n"/>
+                        <segue destination="J72-CO-lh8" kind="show" identifier="NStoH" id="He6-lB-fVi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgd-gT-4bA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -96,7 +96,7 @@ class NewSessionController: UIViewController, UITextFieldDelegate, UITextViewDel
     }
     
     @IBAction func onHelpClick(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "NStoH", sender: self)
     }
     
     
