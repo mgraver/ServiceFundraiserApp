@@ -958,6 +958,7 @@
                                 <state key="normal" title="Button" image="QButton.png"/>
                                 <connections>
                                     <action selector="onHelpClick:" destination="qW5-2x-NsQ" eventType="touchDown" id="fjz-WS-Kmn"/>
+                                    <action selector="onHelpClick:" destination="cPW-OD-tmg" eventType="touchDown" id="fq6-0U-XKW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -996,7 +997,7 @@
                         <segue destination="g0X-wh-aQv" kind="show" identifier="SVtoIncomeEdit" id="IrY-xE-Ze3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SVtoVC" id="rfC-H1-sKZ"/>
                         <segue destination="VAT-HN-98H" kind="show" identifier="SVtoRV" id="BjV-Bz-Ndt"/>
-                        <segue destination="XXK-e5-DG6" kind="show" id="9Eo-sv-n84"/>
+                        <segue destination="XXK-e5-DG6" kind="show" identifier="SVtoH" id="9Eo-sv-n84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJO-x7-Rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>

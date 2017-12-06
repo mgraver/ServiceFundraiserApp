@@ -54,7 +54,7 @@ class SessionView: UIViewController{
         performSegue(withIdentifier: "SVtoIncomeEdit", sender: self)
     }
     
-    //MARK: -BACK Button
+    //MARK: -Button Actions
     @IBAction func onBackClick(_ sender: UIButton) {
         if recordDestination {
             performSegue(withIdentifier: "SVtoRV", sender: self)
@@ -67,6 +67,11 @@ class SessionView: UIViewController{
         let sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
         Singleton.sharedInstance.sessions.remove(at: sessionIndex!)
     }
+    
+    @IBAction func onHelpClick(_ sender: UIButton) {
+        performSegue(withIdentifier: "SVtoH", sender: self)
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,6 +92,14 @@ class SessionView: UIViewController{
                 workerController.sessionIndex = Singleton.sharedInstance.sessions.index(of: currentSession)
                 workerController.recordDestination = self.recordDestination
             }
+        }
+        
+        if segue.identifier == "SVtoH"
+        {
+            let helperView = segue.destination
+            slideInTransitioningDelegate.direction = .right
+            helperView.transitioningDelegate = slideInTransitioningDelegate
+            helperView.modalPresentationStyle = .custom
         }
         
     }
